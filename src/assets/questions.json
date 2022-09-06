@@ -2,19 +2,19 @@
     {
         "answers": [
             {
-                "id": "F:q0a0",
+                "id": "F:q0:a0",
                 "text": "No identifier"
             },
             {
-                "id": "F:q0a1",
+                "id": "F:q0:a1",
                 "text": "Local identifier or reasonably unique name"
             },
             {
-                "id": "F:q0a2",
+                "id": "F:q0:a2",
                 "text": "Web address (URL)"
             },
             {
-                "id": "F:q0a3",
+                "id": "F:q0:a3",
                 "text": "Globally unique and persistent identifier (e.g. DOI, PURL, or Handle)"
             }
         ],
@@ -26,19 +26,19 @@
     {
         "answers": [
             {
-                "id": "F:q1a0",
+                "id": "F:q1:a0",
                 "text": "No identifier"
             },
             {
-                "id": "F:q1a1",
+                "id": "F:q1:a1",
                 "text": "There is only one identifier for the entire bundle/package"
             },
             {
-                "id": "F:q1a2",
+                "id": "F:q1:a2",
                 "text": "Some components have distinct identifiers"
             },
             {
-                "id": "F:q1a3",
+                "id": "F:q1:a3",
                 "text": "Each component has a PID with reference to a top level PID"
             }
         ],
@@ -50,15 +50,15 @@
     {
         "answers": [
             {
-                "id": "F:q2a0",
+                "id": "F:q2:a0",
                 "text": "No identifier"
             },
             {
-                "id": "F:q2a1",
+                "id": "F:q2:a1",
                 "text": "Each major version (version X) is assigned an identifier"
             },
             {
-                "id": "F:q2a2",
+                "id": "F:q2:a2",
                 "text": "available versions distinctly identified"
             }
         ],
@@ -70,19 +70,19 @@
     {
         "answers": [
             {
-                "id": "F:q3a0",
+                "id": "F:q3:a0",
                 "text": "The software is not described with any metadata"
             },
             {
-                "id": "F:q3a1",
+                "id": "F:q3:a1",
                 "text": "The software has a title and a brief description"
             },
             {
-                "id": "F:q3a2",
+                "id": "F:q3:a2",
                 "text": "Title, description, and multiple fields are provided, albeit informally (not using a standard format)"
             },
             {
-                "id": "F:q3a3",
+                "id": "F:q3:a3",
                 "text": "Described comprehensively using a formal machine-readable metadata schema "
             }
         ],
@@ -94,15 +94,15 @@
     {
         "answers": [
             {
-                "id": "F:q4a0",
+                "id": "F:q4:a0",
                 "text": "No metadata"
             },
             {
-                "id": "F:q4a1",
+                "id": "F:q4:a1",
                 "text": "Metadata does not include an identifier for the software"
             },
             {
-                "id": "F:q4a2",
+                "id": "F:q4:a2",
                 "text": "The identifier is captured in the metadata that describes the software"
             }
         ],
@@ -114,19 +114,19 @@
     {
         "answers": [
             {
-                "id": "F:q5a0",
+                "id": "F:q5:a0",
                 "text": "No metadata"
             },
             {
-                "id": "F:q5a1",
+                "id": "F:q5:a1",
                 "text": "Metadata is not structured"
             },
             {
-                "id": "F:q5a2",
+                "id": "F:q5:a2",
                 "text": "Metadata might be searchable and indexable but not FAIR"
             },
             {
-                "id": "F:q5a3",
+                "id": "F:q5:a3",
                 "text": "Metadata is structured in a FAIR way"
             }
         ],
@@ -138,20 +138,20 @@
     {
         "answers": [
             {
-                "id": "A:q0a0",
-                "text": "A:q0a0"
+                "id": "A:q0:a0",
+                "text": "A:q0:a0"
             },
             {
-                "id": "A:q0a1",
-                "text": "A:q0a1"
+                "id": "A:q0:a1",
+                "text": "A:q0:a1"
             },
             {
-                "id": "A:q0a2",
-                "text": "A:q0a2"
+                "id": "A:q0:a2",
+                "text": "A:q0:a2"
             },
             {
-                "id": "A:q0a3",
-                "text": "A:q0a3"
+                "id": "A:q0:a3",
+                "text": "A:q0:a3"
             }
         ],
         "id": "A:q0",
@@ -162,20 +162,20 @@
     {
         "answers": [
             {
-                "id": "A:q1a0",
-                "text": "A:q1a0"
+                "id": "A:q1:a0",
+                "text": "A:q1:a0"
             },
             {
-                "id": "A:q1a1",
-                "text": "A:q1a1"
+                "id": "A:q1:a1",
+                "text": "A:q1:a1"
             },
             {
-                "id": "A:q1a2",
-                "text": "A:q1a2"
+                "id": "A:q1:a2",
+                "text": "A:q1:a2"
             },
             {
-                "id": "A:q1a3",
-                "text": "A:q1a3"
+                "id": "A:q1:a3",
+                "text": "A:q1:a3"
             }
         ],
         "id": "A:q1",
@@ -186,20 +186,20 @@
     {
         "answers": [
             {
-                "id": "A:q2a0",
-                "text": "A:q2a0"
+                "id": "A:q2:a0",
+                "text": "A:q2:a0"
             },
             {
-                "id": "A:q2a1",
-                "text": "A:q2a1"
+                "id": "A:q2:a1",
+                "text": "A:q2:a1"
             },
             {
-                "id": "A:q2a2",
-                "text": "A:q2a2"
+                "id": "A:q2:a2",
+                "text": "A:q2:a2"
             },
             {
-                "id": "A:q2a3",
-                "text": "A:q2a3"
+                "id": "A:q2:a3",
+                "text": "A:q2:a3"
             }
         ],
         "id": "A:q2",
@@ -210,20 +210,20 @@
     {
         "answers": [
             {
-                "id": "A:q3a0",
-                "text": "A:q3a0"
+                "id": "A:q3:a0",
+                "text": "A:q3:a0"
             },
             {
-                "id": "A:q3a1",
-                "text": "A:q3a1"
+                "id": "A:q3:a1",
+                "text": "A:q3:a1"
             },
             {
-                "id": "A:q3a2",
-                "text": "A:q3a2"
+                "id": "A:q3:a2",
+                "text": "A:q3:a2"
             },
             {
-                "id": "A:q3a3",
-                "text": "A:q3a3"
+                "id": "A:q3:a3",
+                "text": "A:q3:a3"
             }
         ],
         "id": "A:q3",
@@ -234,12 +234,12 @@
     {
         "answers": [
             {
-                "id": "I:q0a0",
-                "text": "I:q0a0"
+                "id": "I:q0:a0",
+                "text": "I:q0:a0"
             },
             {
-                "id": "I:q0a1",
-                "text": "I:q0a1"
+                "id": "I:q0:a1",
+                "text": "I:q0:a1"
             }
         ],
         "id": "I:q0",
@@ -250,16 +250,16 @@
     {
         "answers": [
             {
-                "id": "R:q0a0",
-                "text": "R:q0a0"
+                "id": "R:q0:a0",
+                "text": "R:q0:a0"
             },
             {
-                "id": "R:q0a1",
-                "text": "R:q0a1"
+                "id": "R:q0:a1",
+                "text": "R:q0:a1"
             },
             {
-                "id": "R:q0a2",
-                "text": "R:q0a2"
+                "id": "R:q0:a2",
+                "text": "R:q0:a2"
             }
         ],
         "id": "R:q0",
