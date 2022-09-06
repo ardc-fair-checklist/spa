@@ -1,23 +1,26 @@
 <template>
     <fieldset>
-        <legend>{{ question }}</legend>
+        <legend>{{ question.text }}</legend>
 
-        <div v-for="{answer, id} in answers" >
-            <input type="radio" id="louie" value="louie" >
-            <label for="louie">{{ answer }}</label>
-        </div>
+        <Answer v-for="answer in question.answers"
+            v-bind:answer="answer"
+            v-bind:key="answer.id"
+        />
 
     </fieldset>
 </template>
 
 <script setup lang="ts">
+import Answer from './Answer.vue'
 defineProps<{
-    answers: {
-        answer: string,
+    question: {
+        answers: {
+            text: string,
+            id: string
+        }[]
         id: string
-    }[]
-    id: string
-    question: string
+        text: string
+    }
 }>()
 </script>
 

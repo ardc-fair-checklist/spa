@@ -3,268 +3,268 @@
         "answers": [
             {
                 "id": "F:q0a0",
-                "answer": "No identifier"
+                "text": "No identifier"
             },
             {
                 "id": "F:q0a1",
-                "answer": "Local identifier or reasonably unique name"
+                "text": "Local identifier or reasonably unique name"
             },
             {
                 "id": "F:q0a2",
-                "answer": "Web address (URL)"
+                "text": "Web address (URL)"
             },
             {
                 "id": "F:q0a3",
-                "answer": "Globally unique and persistent identifier (e.g. DOI, PURL, or Handle)"
+                "text": "Globally unique and persistent identifier (e.g. DOI, PURL, or Handle)"
             }
         ],
         "principle": "F1. Software is assigned a globally unique and persistent identifier",
         "guidance": "A uniquely named piece of software is not the same as an identifier as it might be linked to a registry or programming language. A Uniform Resource Locator (URL) is a kind of unique identifier, but might not be persistent.",
         "id": "F:q0",
-        "question": "Does the software have any identifier assigned?"
+        "text": "Does the software have any identifier assigned?"
     },
     {
         "answers": [
             {
                 "id": "F:q1a0",
-                "answer": "No identifier"
+                "text": "No identifier"
             },
             {
                 "id": "F:q1a1",
-                "answer": "There is only one identifier for the entire bundle/package"
+                "text": "There is only one identifier for the entire bundle/package"
             },
             {
                 "id": "F:q1a2",
-                "answer": "Some components have distinct identifiers"
+                "text": "Some components have distinct identifiers"
             },
             {
                 "id": "F:q1a3",
-                "answer": "Each component has a PID with reference to a top level PID"
+                "text": "Each component has a PID with reference to a top level PID"
             }
         ],
         "principle": "F1.1. Different components of the software are assigned distinct identifiers representing different levels of granularity",
         "guidance": "A persistent identifier (PID) like a DOI, PURL or Handle has the following characteristics: globally unique, citable and persistent. The granularity is decided for each software and its maturity.",
         "id": "F:q1",
-        "question": "Are different components of the software assigned distinct identifiers representing different levels of granularity?"
+        "text": "Are different components of the software assigned distinct identifiers representing different levels of granularity?"
     },
     {
         "answers": [
             {
                 "id": "F:q2a0",
-                "answer": "No identifier"
+                "text": "No identifier"
             },
             {
                 "id": "F:q2a1",
-                "answer": "Each major version (version X) is assigned an identifier"
+                "text": "Each major version (version X) is assigned an identifier"
             },
             {
                 "id": "F:q2a2",
-                "answer": "available versions distinctly identified"
+                "text": "available versions distinctly identified"
             }
         ],
         "principle": "F1.2. Different versions of the same software are assigned distinct identifiers.",
         "guidance": "Version is one of the granularity levels identified as most relevant. Depending on the maturity of the software development, not only major versions but minor and point versions are also encouraged. For example: - each minor version (version X.Y) is assigned an identifier - Each point version (version X.Y.Z) is assigned an identifier",
         "id": "F:q2",
-        "question": "Are different versions of the same software identified?"
+        "text": "Are different versions of the same software identified?"
     },
     {
         "answers": [
             {
                 "id": "F:q3a0",
-                "answer": "The software is not described with any metadata"
+                "text": "The software is not described with any metadata"
             },
             {
                 "id": "F:q3a1",
-                "answer": "The software has a title and a brief description"
+                "text": "The software has a title and a brief description"
             },
             {
                 "id": "F:q3a2",
-                "answer": "Title, description, and multiple fields are provided, albeit informally (not using a standard format)"
+                "text": "Title, description, and multiple fields are provided, albeit informally (not using a standard format)"
             },
             {
                 "id": "F:q3a3",
-                "answer": "Described comprehensively using a formal machine-readable metadata schema "
+                "text": "Described comprehensively using a formal machine-readable metadata schema "
             }
         ],
         "principle": "F2. Software is described with rich metadata.",
         "guidance": "See also Interoperable and Reusable for specific questions about relationships between objects, and about specific kinds of metadata. Rich metadata constitutes a plurality of attributes (for R1): (e.g. name, version, contributors roles, programming language, description of the purpose, science domain, key words, licence, PID, related identifiers) Examples of formal machine-readable metadata schemas are (e.g. Citation.CFF, .zenodo.json, codemeta.jsonld)",
         "id": "F:q3",
-        "question": "Is the software described with rich metadata?"
+        "text": "Is the software described with rich metadata?"
     },
     {
         "answers": [
             {
                 "id": "F:q4a0",
-                "answer": "No metadata"
+                "text": "No metadata"
             },
             {
                 "id": "F:q4a1",
-                "answer": "Metadata does not include an identifier for the software"
+                "text": "Metadata does not include an identifier for the software"
             },
             {
                 "id": "F:q4a2",
-                "answer": "The identifier is captured in the metadata that describes the software"
+                "text": "The identifier is captured in the metadata that describes the software"
             }
         ],
         "principle": "F3. Metadata clearly and explicitly include the identifier of the software they describe.",
         "guidance": "The identifier is recommended to be globally unique and persistent. Those features enable citability. F3 calls for that identifier to be included within the metadata record that the identifier points to",
         "id": "F:q4",
-        "question": "Is the identifier included in the metadata that describes the software?"
+        "text": "Is the identifier included in the metadata that describes the software?"
     },
     {
         "answers": [
             {
                 "id": "F:q5a0",
-                "answer": "No metadata"
+                "text": "No metadata"
             },
             {
                 "id": "F:q5a1",
-                "answer": "Metadata is not structured"
+                "text": "Metadata is not structured"
             },
             {
                 "id": "F:q5a2",
-                "answer": "Metadata might be searchable and indexable but not FAIR"
+                "text": "Metadata might be searchable and indexable but not FAIR"
             },
             {
                 "id": "F:q5a3",
-                "answer": "Metadata is structured in a FAIR way"
+                "text": "Metadata is structured in a FAIR way"
             }
         ],
         "principle": "F4. Metadata are FAIR, and are searchable and indexable.",
         "guidance": "Many of the questions here relate to making the metadata associated with software FAIR. Principles F2, F3, A2, R1, and R2 all relate to making the metadata associated with software FAIR. Here the focus is on that metadata being captured in a way that enables searching and indexing of that metadata. For instance, a codemeta file may hold the relevant metadata, but if it is not exposed (or integrated) in a way that enables indexing, then it will not fulfil this criterion. Here this consideration is not just that the metadata exists, but also that it is available in a system that enables it to be FAIR.",
         "id": "F:q5",
-        "question": "Are metadata FAIR, searchable and indexable?"
+        "text": "Are metadata FAIR, searchable and indexable?"
     },
     {
         "answers": [
             {
                 "id": "A:q0a0",
-                "answer": "A:q0a0"
+                "text": "A:q0a0"
             },
             {
                 "id": "A:q0a1",
-                "answer": "A:q0a1"
+                "text": "A:q0a1"
             },
             {
                 "id": "A:q0a2",
-                "answer": "A:q0a2"
+                "text": "A:q0a2"
             },
             {
                 "id": "A:q0a3",
-                "answer": "A:q0a3"
+                "text": "A:q0a3"
             }
         ],
         "id": "A:q0",
         "principle": "",
         "guidance": "",
-        "question": "Can the software be retrieved via its identifier using standardised protocols?"
+        "text": "Can the software be retrieved via its identifier using standardised protocols?"
     },
     {
         "answers": [
             {
                 "id": "A:q1a0",
-                "answer": "A:q1a0"
+                "text": "A:q1a0"
             },
             {
                 "id": "A:q1a1",
-                "answer": "A:q1a1"
+                "text": "A:q1a1"
             },
             {
                 "id": "A:q1a2",
-                "answer": "A:q1a2"
+                "text": "A:q1a2"
             },
             {
                 "id": "A:q1a3",
-                "answer": "A:q1a3"
+                "text": "A:q1a3"
             }
         ],
         "id": "A:q1",
         "principle": "",
         "guidance": "",
-        "question": "Can metadata be retrieved via is identifier using standardised protocols?"
+        "text": "Can metadata be retrieved via is identifier using standardised protocols?"
     },
     {
         "answers": [
             {
                 "id": "A:q2a0",
-                "answer": "A:q2a0"
+                "text": "A:q2a0"
             },
             {
                 "id": "A:q2a1",
-                "answer": "A:q2a1"
+                "text": "A:q2a1"
             },
             {
                 "id": "A:q2a2",
-                "answer": "A:q2a2"
+                "text": "A:q2a2"
             },
             {
                 "id": "A:q2a3",
-                "answer": "A:q2a3"
+                "text": "A:q2a3"
             }
         ],
         "id": "A:q2",
         "principle": "",
         "guidance": "",
-        "question": "Is the protocol open, free and universally implementable? and does it allow for authentication and autorisation procedures?"
+        "text": "Is the protocol open, free and universally implementable? and does it allow for authentication and autorisation procedures?"
     },
     {
         "answers": [
             {
                 "id": "A:q3a0",
-                "answer": "A:q3a0"
+                "text": "A:q3a0"
             },
             {
                 "id": "A:q3a1",
-                "answer": "A:q3a1"
+                "text": "A:q3a1"
             },
             {
                 "id": "A:q3a2",
-                "answer": "A:q3a2"
+                "text": "A:q3a2"
             },
             {
                 "id": "A:q3a3",
-                "answer": "A:q3a3"
+                "text": "A:q3a3"
             }
         ],
         "id": "A:q3",
         "principle": "",
         "guidance": "",
-        "question": "Are metadata accessible, even when the software is no longer available?"
+        "text": "Are metadata accessible, even when the software is no longer available?"
     },
     {
         "answers": [
             {
                 "id": "I:q0a0",
-                "answer": "I:q0a0"
+                "text": "I:q0a0"
             },
             {
                 "id": "I:q0a1",
-                "answer": "I:q0a1"
+                "text": "I:q0a1"
             }
         ],
         "id": "I:q0",
         "principle": "",
         "guidance": "",
-        "question": "I question 0"
+        "text": "I question 0"
     },
     {
         "answers": [
             {
                 "id": "R:q0a0",
-                "answer": "R:q0a0"
+                "text": "R:q0a0"
             },
             {
                 "id": "R:q0a1",
-                "answer": "R:q0a1"
+                "text": "R:q0a1"
             },
             {
                 "id": "R:q0a2",
-                "answer": "R:q0a2"
+                "text": "R:q0a2"
             }
         ],
         "id": "R:q0",
         "principle": "",
         "guidance": "",
-        "question": "R question 0"
+        "text": "R question 0"
     }
 ]

@@ -1,9 +1,7 @@
 <template>
-    <Question v-for="{id, question, answers} in questions"
-        v-bind:answers="answers"
-        v-bind:id="id"
+    <Question v-for="question in questions"
+        v-bind:key="question.id"
         v-bind:question="question"
-        key="id"
     />
 </template>
 
