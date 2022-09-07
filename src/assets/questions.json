@@ -139,96 +139,96 @@
         "answers": [
             {
                 "id": "A:q0:a0",
-                "text": "A:q0:a0"
+                "text": "No access to software, or there are unspecified access conditions, or software is not retrievable by its identifier"
             },
             {
                 "id": "A:q0:a1",
-                "text": "A:q0:a1"
+                "text": "Software is retrieved via its identifier with defined access conditions, but access is closed or mediated by individual arrangement"
             },
             {
                 "id": "A:q0:a2",
-                "text": "A:q0:a2"
+                "text": "Stated minimal restrictions for software to be downloaded from an online location (e.g personal or group website or FTP server)"
             },
             {
                 "id": "A:q0:a3",
-                "text": "A:q0:a3"
+                "text": "Software can be retrieved from a publicly-accessible code development repository, package or library manager or software registry or archive"
             }
         ],
         "id": "A:q0",
-        "principle": "",
-        "guidance": "",
+        "principle": "A1. Software is retrievable by its identifier using a standardised communications protocol.",
+        "guidance": "Software is retrievable from: - a publicly-accessible code development repository (e.g. GitHub, GitLab, BitBucket, etc), - a package or library manager (e.g apt, CRAN, PyPI, etc), - a research software registry  (e.g. see this list), or - an archive.",
         "text": "Can the software be retrieved via its identifier using standardised protocols?"
     },
     {
         "answers": [
             {
                 "id": "A:q1:a0",
-                "text": "A:q1:a0"
+                "text": "No metadata record exists"
             },
             {
                 "id": "A:q1:a1",
-                "text": "A:q1:a1"
+                "text": "Metadata exists, but is not accessible via an identifier"
             },
             {
                 "id": "A:q1:a2",
-                "text": "A:q1:a2"
+                "text": "Metadata is retrievable via an identifier"
             },
             {
                 "id": "A:q1:a3",
-                "text": "A:q1:a3"
+                "text": "And is machine readable"
             }
         ],
         "id": "A:q1",
-        "principle": "",
-        "guidance": "",
+        "principle": "A1. Software is retrievable by its identifier using a standardised communications protocol.",
+        "guidance": "Some formal machine-readable metadata schema exist specifically for software (e.g. Citation.CFF, .zenodo.json, codemeta.jsonld). Mechanisms for retrieving metadata include DataCite DOI metadata, encoding of metadata using schema.org on the page resolved to by the identifier, and retrieval via a package manager",
         "text": "Can metadata be retrieved via is identifier using standardised protocols?"
     },
     {
         "answers": [
             {
                 "id": "A:q2:a0",
-                "text": "A:q2:a0"
+                "text": "No (e.g. a specialized client using a closed protocol might be required to download the software)"
             },
             {
                 "id": "A:q2:a1",
-                "text": "A:q2:a1"
+                "text": "Protocol is not open or free and allows for authentication and authorisation"
             },
             {
                 "id": "A:q2:a2",
-                "text": "A:q2:a2"
+                "text": "Protocol is open and free but does not allow for authentication and authorisation"
             },
             {
                 "id": "A:q2:a3",
-                "text": "A:q2:a3"
+                "text": "Yes"
             }
         ],
         "id": "A:q2",
-        "principle": "",
-        "guidance": "",
+        "principle": "A1.1. The protocol is open, free, and universally implementable. A1.2. The protocol allows for an authentication and authorisation procedure, where necessary.",
+        "guidance": "This question refers to the combinations of these two principles [define protocol] [describe authentication and authorisation]",
         "text": "Is the protocol open, free and universally implementable? and does it allow for authentication and autorisation procedures?"
     },
     {
         "answers": [
             {
                 "id": "A:q3:a0",
-                "text": "A:q3:a0"
+                "text": "Not applicable, no metadata record exists"
             },
             {
                 "id": "A:q3:a1",
-                "text": "A:q3:a1"
+                "text": "No, metadata is lost if software is no longer accessible"
             },
             {
                 "id": "A:q3:a2",
-                "text": "A:q3:a2"
+                "text": "Unsure, whether the institution/registry provides this feature"
             },
             {
                 "id": "A:q3:a3",
-                "text": "A:q3:a3"
+                "text": "Yes"
             }
         ],
         "id": "A:q3",
-        "principle": "",
-        "guidance": "",
+        "principle": "A2. Metadata are accessible, even when the software is no longer available.",
+        "guidance": "Mostly a feature of the metadata registry",
         "text": "Are metadata accessible, even when the software is no longer available?"
     },
     {
