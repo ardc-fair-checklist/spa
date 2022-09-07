@@ -1,7 +1,8 @@
 <template>
     <div>
         <h1>ARDC FAIR for software self-assessment checklist</h1>
-        <Question v-for="question in questions"
+        <Question v-for="question, index in questions"
+            v-bind:index="index"
             v-bind:key="question.id"
             v-bind:question="question"
         />
