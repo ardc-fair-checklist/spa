@@ -1,0 +1,38 @@
+name: publish
+
+# This workflow is triggered manually. It creates a production build off of main branch
+# and publishes it to GitHub pages https://ardc-fair-checklist.github.io/ardc-fair-checklist
+
+on:
+  workflow_dispatch:
+
+jobs:
+
+  build:
+    name: publish
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Create production build and publish it to Github Pages
+        shell: bash
+        run: |
+
+          # abort on errors
+          set -e
+
+          # get the dependencies
+          npm install
+
+          # build
+          npm run build
+
+          # navigate into the build output directory
+          cd dist
+
+          git init
+          git checkout -b main
+          git add -A
+          git commit -m "deploy"
+
+          # if you are deploying to https://<USERNAME>.github.io/<REPO>
+          git push -f https://github.com/ardc-fair-checklist/ardc-fair-checklist.git main:gh-pages
