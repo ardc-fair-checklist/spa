@@ -17,27 +17,28 @@ jobs:
         shell: bash
         run: |
 
-          # abort on errors
+          echo "set abort on errors"
           set -e
 
-          # get the dependencies
+          echo "get the dependencies"
           npm install
 
-          # build
+          echo "build"
           npm run build
 
-          # navigate into the build output directory
+          echo "navigate into the build output directory"
           cd dist
 
-          # set some git properties
+          echo "set some git properties"
           git config init.defaultBranch main
           git config user.email "ci@no-reply.com"
           git config user.name "ci publish workflow"
 
+          echo "commit the new content"
           git init
           git checkout -b main
           git add -A
           git commit -m "deploy"
 
-          # if you are deploying to https://<USERNAME>.github.io/<REPO>
+          echo "deploy to https://<USERNAME>.github.io/<REPO>"
           git push -f https://github.com/ardc-fair-checklist/ardc-fair-checklist.git main:gh-pages
