@@ -6,11 +6,13 @@
             v-bind:key="question.id"
             v-bind:question="question"
         />
+        <Badge />
     </div>
 </template>
 
 
 <script setup lang="ts">
+import Badge from './components/Badge.vue'
 import Question from './components/Question.vue'
 import questions from './assets/questions.json'
 </script>
