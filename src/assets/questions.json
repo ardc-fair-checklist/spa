@@ -269,7 +269,7 @@
         "id": "I:q1",
         "principle": "Software may utilise external data, metadata and other similar objects. Ideally, these should also be FAIR when possible. A qualified reference is a pointer to the other object, with a clear authority for resolving/confirming that identity given in the form of the reference. Ideally this is in a form that includes a resolver within the reference (e.g., in the form of a URL).",
         "guidance": "I2. Software includes qualified references to other objects.",
-        "text": "How is the relationship to data and metadata described in the metadata and software? (see Q17 for relationship to other software)"
+        "text": "How is the relationship to data and metadata described in the metadata and software? (see R:q4 for relationship to other software)"
     },
     {
         "answers": [
@@ -297,7 +297,7 @@
         "id": "R:q0",
         "principle": "Reuseable: Software is both usable (it can be executed) and reusable (it can be understood, modified, built upon, or incorporated into other software).",
         "guidance": "Specifically it considers reusability in the sense of software being understood, built upon or incorporated into other software, but not necessarily executed (again). Sensitivities may restrict access to the software. The form of the software or the way in which it is made available restricts the way in which it can be understood. A service may obscure all internal workings of the software if no alternate form is made available. A compiled binary form is not as easily pulled apart or understood as a source code representation. Binaries in some cases can be built upon or incorporated into other software, but this is especially the case when it the programming interface to that software is fully documented. Source code is the most straightforwardly interrogable form of software, but in some circumstances making this form available may not be possible, practical or desirable.",
-        "text": "Can software be understood, modified, built upon, or incorporated into other software? Is software made available in a form that makes this easy to do? Links to Q7"
+        "text": "Can software be understood, modified, built upon, or incorporated into other software? Is software made available in a form that makes this easy to do? Links to A:q0"
     },
     {
         "answers": [
@@ -393,7 +393,7 @@
         "id": "R:q4",
         "principle": "R2. Software includes qualified references to other software.",
         "guidance": "A qualified reference is a pointer to an external object, with a clear authority for resolving/confirming that identity given in the form of the reference. Ideally this is in a form that includes a resolver within the reference (e.g., in the form of a URI). For software this would mean referring to other software via a resolvable, qualified permanent identifier. In metadata this is only possible when software is able to be referred to in this fashion. Not all software can be referred to in this way. A qualified reference in software is presently technically difficult or impossible in many languages, where conventional practice is to use a (unqualified) reference via a (possibly non-unique) name, possibly in combination with a version number.",
-        "text": "How is the relationship to software described in the metadata and software? (see Q12 for relationship to other components such as data and metadata)"
+        "text": "How is the relationship to software described in the metadata and software? (see I:q1 for relationship to other components such as data and metadata)"
     },
     {
         "answers": [
@@ -413,6 +413,6 @@
         "id": "R:q5",
         "principle": "R3. Software meets domain-relevant community standards.",
         "guidance": "Relevant research domains are determined by the intended user base of the software, not any possible community of use for a piece of software. A piece of software created to address the needs of a community should be aware of any standards put forward by that community or adjacent ones. Similarly, a piece of software (such as analysis code) which is intended to represent work done within a domain-community should also be aware of any standards put forward by that community or adjacent ones. Some examples of domain-relevant community standards are: (e.g. CoC, Credit to authors and collaborations, institutional standards, registry standards, nomenclature described within a community)",
-        "text": "If they exist, how much have domain-relevant community standards been considered in writing the software? it is linked to Q11"
+        "text": "If they exist, how much have domain-relevant community standards been considered in writing the software? it is linked to I:q0"
     }
 ]
