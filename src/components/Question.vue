@@ -1,13 +1,16 @@
 <template>
-    <fieldset>
-        <legend>{{ question.text }}</legend>
+    <div>
+        <h2>{{ question.id }}</h2>
+        <fieldset>
+            <legend>{{ question.text }}</legend>
 
-        <Answer v-for="answer in question.answers"
-            v-bind:answer="answer"
-            v-bind:key="answer.id"
-        />
+            <Answer v-for="answer in question.answers"
+                v-bind:answer="answer"
+                v-bind:key="answer.id"
+            />
 
-    </fieldset>
+        </fieldset>
+    </div>
 </template>
 
 <script setup lang="ts">
@@ -25,4 +28,8 @@ defineProps<{
 </script>
 
 <style scoped>
+fieldset {
+    margin-bottom: 5em;
+}
+
 </style>
