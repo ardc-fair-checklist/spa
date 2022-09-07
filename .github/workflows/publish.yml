@@ -8,12 +8,15 @@ on:
 
 jobs:
 
-  build:
+  publish:
     name: publish
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Create production build and publish it to Github Pages
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: Create production build
         shell: bash
         run: |
 
@@ -26,19 +29,11 @@ jobs:
           echo "build"
           npm run build
 
-          echo "navigate into the build output directory"
-          cd dist
-
-          echo "set some git properties"
-          git config --global init.defaultBranch main
-          git config --global user.email "ci@no-reply.com"
-          git config --global user.name "ci publish workflow"
-
-          echo "commit the new content"
-          git init
-          git checkout -b main
-          git add -A
-          git commit -m "deploy"
-
-          echo "deploy to https://<USERNAME>.github.io/<REPO>"
-          git push -f https://github.com/ardc-fair-checklist/ardc-fair-checklist.git main:gh-pages
+    - name: Deploy to gh-pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./dist
+        user_name: 'ghactions[bot]'
+        user_email: 'ghactions[bot]@users.noreply.github.com'
+        commit_message: ':robot: Update github.io page'
