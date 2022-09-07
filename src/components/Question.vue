@@ -19,6 +19,8 @@
 
 <script setup lang="ts">
 import Answer from './Answer.vue'
+import { state, setState } from '../store'
+
 const props = defineProps<{
     index: number
     question: {
@@ -32,13 +34,11 @@ const props = defineProps<{
     }
 }>()
 
-const nQuestions = 18;
-const state = "0".repeat(nQuestions);
-const isChecked = (index: number) => parseInt(state[props.index], 10) === index;
+const isChecked = (index: number) => parseInt(state.value[props.index], 10) === index;
 const onClick = (index: number) => {
     return () => {
-        const newState = state.slice(0, props.index) + index.toString() +  state.slice(props.index + 1);
-        console.log(newState);
+        const newState = state.value.slice(0, props.index) + index.toString() +  state.value.slice(props.index + 1);
+        setState(newState);
     }
 }
 
