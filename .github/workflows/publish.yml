@@ -29,6 +29,11 @@ jobs:
           # navigate into the build output directory
           cd dist
 
+          # set some git properties
+          git config init.defaultBranch main
+          git config user.email "ci@no-reply.com"
+          git config user.name "ci publish workflow"
+
           git init
           git checkout -b main
           git add -A
