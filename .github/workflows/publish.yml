@@ -12,7 +12,8 @@ jobs:
     name: publish
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Check out a copy of the repository
+        uses: actions/checkout@v3
         with:
           ref: ${{ github.head_ref }}
 
@@ -29,11 +30,11 @@ jobs:
           echo "build"
           npm run build
 
-    - name: Deploy to gh-pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./dist
-        user_name: 'ghactions[bot]'
-        user_email: 'ghactions[bot]@users.noreply.github.com'
-        commit_message: ':robot: Update github.io page'
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          user_name: 'ghactions[bot]'
+          user_email: 'ghactions[bot]@users.noreply.github.com'
+          commit_message: ':robot: Update github.io page'
