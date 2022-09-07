@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="container">
         <h2>{{ question.id }}</h2>
         <fieldset>
             <legend>{{ question.text }}</legend>
@@ -47,12 +47,19 @@ const onClick = (index: number) => {
 <style scoped>
 fieldset {
     margin-bottom: 5em;
+    max-width: 40em;
 }
 
 p.guidance {
     font-size: smaller;
     margin-bottom: 4em;
     margin-top: 2em;
+}
+
+div.container {
+    display: flex;
+    place-items: center;
+    flex-direction: column;
 }
 
 </style>
