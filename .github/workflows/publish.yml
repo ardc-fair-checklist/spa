@@ -30,9 +30,9 @@ jobs:
           cd dist
 
           echo "set some git properties"
-          git config init.defaultBranch main
-          git config user.email "ci@no-reply.com"
-          git config user.name "ci publish workflow"
+          git config --global init.defaultBranch main
+          git config --global user.email "ci@no-reply.com"
+          git config --global user.name "ci publish workflow"
 
           echo "commit the new content"
           git init
