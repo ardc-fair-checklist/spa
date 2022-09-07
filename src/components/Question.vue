@@ -4,6 +4,8 @@
         <fieldset>
             <legend>{{ question.text }}</legend>
 
+            <p class="guidance">{{ question.guidance }}</p>
+
             <Answer v-for="(answer, index) in question.answers"
                 v-bind:answer="answer"
                 v-bind:isChecked="isChecked(index)"
@@ -24,6 +26,7 @@ const props = defineProps<{
             text: string,
             id: string
         }[]
+        guidance: string
         id: string
         text: string
     }
@@ -44,6 +47,12 @@ const onClick = (index: number) => {
 <style scoped>
 fieldset {
     margin-bottom: 5em;
+}
+
+p.guidance {
+    font-size: smaller;
+    margin-bottom: 4em;
+    margin-top: 2em;
 }
 
 </style>
