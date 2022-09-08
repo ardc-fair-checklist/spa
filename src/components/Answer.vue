@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="answer">
         <input type="radio" v-bind:id="answer.id" v-bind:value="answer.id" v-bind:checked="isChecked" v-on:click="onClick">
         <label v-bind:for="answer.id">{{ answer.text }}</label>
     </div>

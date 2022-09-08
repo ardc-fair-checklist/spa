@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="badge">
         <h2>Get the badge</h2>
         <h3>Markdown</h3>
         <p>{{ badge }}</p>
@@ -21,4 +21,7 @@ const badge = computed(() => `[![FAIRness badge image](${APP_BASE_URL}/badge.svg
 </script>
 
 <style scoped>
+.badge {
+    padding-bottom: 10em;
+}
 </style>

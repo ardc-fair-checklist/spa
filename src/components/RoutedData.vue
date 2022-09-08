@@ -1,9 +1,9 @@
 <template>
-    <div>
+    <main>
         <h1>ARDC FAIR for data self-assessment checklist</h1>
         <h2>Questions</h2>
         data questions here
-    </div>
+    </main>
 </template>
 
 
@@ -11,9 +11,4 @@
 </script>
 
 <style scoped>
-h1 {
-    line-height: 1.2em;
-    margin-top: 0.5em;
-    margin-bottom: 2.0em;
-}
 </style>

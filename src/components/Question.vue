@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="question">
         <h3>{{ index + 1 }}. {{ question.id }}</h3>
         <fieldset>
             <legend>{{ question.text }}</legend>
@@ -57,7 +57,7 @@ p.guidance {
     margin-top: 2em;
 }
 
-div.container {
+.question {
     display: flex;
     place-items: center;
     flex-direction: column;
