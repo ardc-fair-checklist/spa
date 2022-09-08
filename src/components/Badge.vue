@@ -9,11 +9,11 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { compliance } from '../store'
-import { HOST_AND_ROUTE } from '../constants'
+import { APP_BASE_URL } from '../constants'
 import metadata from '../../package.json'
 const [major, minor] = metadata.version.split('.').slice(0, 2)
-const badge = computed(() => `[![FAIRness badge image](${HOST_AND_ROUTE}/badge.svg)]` +
-                             `(${HOST_AND_ROUTE}?` +
+const badge = computed(() => `[![FAIRness badge image](${APP_BASE_URL}/badge.svg)]` +
+                             `(${APP_BASE_URL}/#/software?` +
                              `v=${major}.${minor}` +
                              `&f=${compliance.value.slice(0, 6)}` +
                              `&a=${compliance.value.slice(6, 10)}` +
