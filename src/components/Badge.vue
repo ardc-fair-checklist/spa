@@ -8,11 +8,16 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
-import { state } from '../store'
+import { compliance } from '../store'
 import { HOST_AND_ROUTE } from '../constants'
 import metadata from '../../package.json'
 const [major, minor] = metadata.version.split('.').slice(0, 2)
-const badge = computed(() => `[![FAIRness badge image](${HOST_AND_ROUTE}/badge.svg)](${HOST_AND_ROUTE}?state=${state.value}&version=${major}.${minor})`)
+const badge = computed(() => `[![FAIRness badge image](${HOST_AND_ROUTE}/badge.svg)]` +
+                             `(${HOST_AND_ROUTE}?` +
+                             `v=${major}.${minor}` +
+                             `&f=${compliance.value.slice(0, 6)}` +
+                             `&a=${compliance.value.slice(6, 10)}` +
+                             `&i=${compliance.value.slice(10, 12)}&r=${compliance.value.slice(12, 18)})`)
 </script>
 
 <style scoped>

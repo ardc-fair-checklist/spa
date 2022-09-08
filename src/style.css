@@ -29,3 +29,16 @@ body {
     margin: 0 auto;
     padding: 2rem;
 }
+
+a {
+    text-decoration: none;
+    color: #4fc3f7
+}
+
+a:visited {
+    color: #8a00c2;
+}
+
+a:hover {
+    text-decoration: underline
+}

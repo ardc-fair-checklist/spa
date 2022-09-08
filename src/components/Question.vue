@@ -19,7 +19,8 @@
 
 <script setup lang="ts">
 import Answer from './Answer.vue'
-import { state, setState } from '../store'
+import { compliance } from '../store'
+import { setQueryParams } from '../routing'
 
 const props = defineProps<{
     index: number
@@ -34,11 +35,11 @@ const props = defineProps<{
     }
 }>()
 
-const isChecked = (index: number) => parseInt(state.value[props.index], 10) === index;
+const isChecked = (index: number) => parseInt(compliance.value[props.index], 10) === index;
 const onClick = (index: number) => {
     return () => {
-        const newState = state.value.slice(0, props.index) + index.toString() +  state.value.slice(props.index + 1);
-        setState(newState);
+        const newCompliance = compliance.value.slice(0, props.index) + index.toString() +  compliance.value.slice(props.index + 1);
+        setQueryParams(newCompliance);
     }
 }
 
