@@ -22,6 +22,7 @@
                 "text": "Globally unique and persistent identifier (e.g. DOI, PURL, or Handle)"
             }
         ],
+        "aspect": "F",
         "guidance": "A uniquely named piece of software is not the same as an identifier as it might be linked to a registry or programming language. A Uniform Resource Locator (URL) is a kind of unique identifier, but might not be persistent.",                                                                                 
         "id": "F:q0",
         "principle": "F1. Software is assigned a globally unique and persistent identifier",
@@ -50,6 +51,7 @@
                 "text": "Each component has a PID with reference to a top level PID"
             }
         ],
+        "aspect": "F",
         "guidance": "A persistent identifier (PID) like a DOI, PURL or Handle has the following characteristics: globally unique, citable and persistent. The granularity is decided for each software and its maturity.",                                                                                                            
         "id": "F:q1",
         "principle": "F1.1. Different components of the software are assigned distinct identifiers representing different levels of granularity",
@@ -73,6 +75,7 @@
                 "text": "available versions distinctly identified"
             }
         ],
+        "aspect": "F",
         "guidance": "Version is one of the granularity levels identified as most relevant. Depending on the maturity of the software development, not only major versions but minor and point versions are also encouraged. For example: - each minor version (version X.Y) is assigned an identifier - Each point version (version X.Y.Z) is assigned an identifier",                                                                                                                                   
         "id": "F:q2",
         "principle": "F1.2. Different versions of the same software are assigned distinct identifiers.",
@@ -101,6 +104,7 @@
                 "text": "Described comprehensively using a formal machine-readable metadata schema "
             }
         ],
+        "aspect": "F",
         "guidance": "See also Interoperable and Reusable for specific questions about relationships between objects, and about specific kinds of metadata. Rich metadata constitutes a plurality of attributes (for R1): (e.g. name, version, contributors roles, programming language, description of the purpose, science domain, key words, licence, PID, related identifiers) Examples of formal machine-readable metadata schemas are (e.g. Citation.CFF, .zenodo.json, codemeta.jsonld)",          
         "id": "F:q3",
         "principle": "F2. Software is described with rich metadata.",
@@ -124,6 +128,7 @@
                 "text": "The identifier is captured in the metadata that describes the software"
             }
         ],
+        "aspect": "F",
         "guidance": "The identifier is recommended to be globally unique and persistent. Those features enable citability. F3 calls for that identifier to be included within the metadata record that the identifier points to",                                                                                                     
         "id": "F:q4",
         "principle": "F3. Metadata clearly and explicitly include the identifier of the software they describe.",
@@ -152,6 +157,7 @@
                 "text": "Metadata is structured in a FAIR way"
             }
         ],
+        "aspect": "F",
         "guidance": "Many of the questions here relate to making the metadata associated with software FAIR. Principles F2, F3, A2, R1, and R2 all relate to making the metadata associated with software FAIR. Here the focus is on that metadata being captured in a way that enables searching and indexing of that metadata. For instance, a codemeta file may hold the relevant metadata, but if it is not exposed (or integrated) in a way that enables indexing, then it will not fulfil this criterion. Here this consideration is not just that the metadata exists, but also that it is available in a system that enables it to be FAIR.",                       
         "id": "F:q5",
         "principle": "F4. Metadata are FAIR, and are searchable and indexable.",
@@ -180,6 +186,7 @@
                 "text": "Software can be retrieved from a publicly-accessible code development repository, package or library manager or software registry or archive"                                                                                                                                                                
             }
         ],
+        "aspect": "A",
         "guidance": "Software is retrievable from: - a publicly-accessible code development repository (e.g. GitHub, GitLab, BitBucket, etc), - a package or library manager (e.g apt, CRAN, PyPI, etc), - a research software registry  (e.g. see this list), or - an archive.",                                                     
         "id": "A:q0",
         "principle": "A1. Software is retrievable by its identifier using a standardised communications protocol.",
@@ -208,6 +215,7 @@
                 "text": "And is machine readable"
             }
         ],
+        "aspect": "A",
         "guidance": "Some formal machine-readable metadata schema exist specifically for software (e.g. Citation.CFF, .zenodo.json, codemeta.jsonld). Mechanisms for retrieving metadata include DataCite DOI metadata, encoding of metadata using schema.org on the page resolved to by the identifier, and retrieval via a package manager",                                                                                                                                                           
         "id": "A:q1",
         "principle": "A1. Software is retrievable by its identifier using a standardised communications protocol.",
@@ -236,6 +244,7 @@
                 "text": "Yes"
             }
         ],
+        "aspect": "A",
         "guidance": "This question refers to the combinations of these two principles [define protocol] [describe authentication and authorisation]",
         "id": "A:q2",
         "principle": "A1.1. The protocol is open, free, and universally implementable. A1.2. The protocol allows for an authentication and authorisation procedure, where necessary.",                                                                                                                                                
@@ -264,6 +273,7 @@
                 "text": "Yes"
             }
         ],
+        "aspect": "A",
         "guidance": "Mostly a feature of the metadata registry",
         "id": "A:q3",
         "principle": "A2. Metadata are accessible, even when the software is no longer available.",
@@ -287,6 +297,7 @@
                 "text": "Input/output meets domain-relevant standards"
             }
         ],
+        "aspect": "I",
         "guidance": "A domain-relevant standard is an agreed standard that addresses the needs of a given community (or communities). For interoperation between software it is necessary that more than one software tool supports common standards for interchange. Ideally, related research software are capable of exchanging data or metadata because they all implement common standards. The way in which the data is transmitted might be via reading and writing files, or by passing arguments to an API and receiving responses. Barriers to meeting this guiding principle include a lack of relevant standards, a lack of community consensus on relevant standards, a lack of implementations of agreed upon standards. Work outside the software itself may need to be done before this guiding principle can be addressed.",  
         "id": "I:q0",
         "principle": "I1. Software reads, writes and exchanges data in a way that meets domain-relevant community standards.",
@@ -310,6 +321,7 @@
                 "text": "Qualified links to other resources are recorded in a machine readable format"
             }
         ],
+        "aspect": "I",
         "guidance": "I2. Software includes qualified references to other objects.",
         "id": "I:q1",
         "principle": "Software may utilise external data, metadata and other similar objects. Ideally, these should also be FAIR when possible. A qualified reference is a pointer to the other object, with a clear authority for resolving/confirming that identity given in the form of the reference. Ideally this is in a form that includes a resolver within the reference (e.g., in the form of a URL).",                                                                                        
@@ -343,6 +355,7 @@
                 "text": "Source code available via a package manager or similar"
             }
         ],
+        "aspect": "R",
         "guidance": "Specifically it considers reusability in the sense of software being understood, built upon or incorporated into other software, but not necessarily executed (again). Sensitivities may restrict access to the software. The form of the software or the way in which it is made available restricts the way in which it can be understood. A service may obscure all internal workings of the software if no alternate form is made available. A compiled binary form is not as easily pulled apart or understood as a source code representation. Binaries in some cases can be built upon or incorporated into other software, but this is especially the case when it the programming interface to that software is fully documented. Source code is the most straightforwardly interrogable form of software, but in some circumstances making this form available may not be possible, practical or desirable.",                                                                      
         "id": "R:q0",
         "principle": "Reuseable: Software is both usable (it can be executed) and reusable (it can be understood, modified, built upon, or incorporated into other software).",                                                                                                                                                       
@@ -366,6 +379,7 @@
                 "text": "Yes, the software is packaged with access to dependencies."
             }
         ],
+        "aspect": "R",
         "guidance": "Specifically it considers reusability in the sense of software be able to be executed, not in the sense of it being understood, built upon or incorporated into other software. Factors affecting the executability of the software include documentation of configuration, dependencies and execution environment (software and hardware). These can be captured in a human readable format (such as text), but are ideally captured in a machine readable format as well. In some cases, it may be possible or desirable to make the software available in a packaged form to facilitate reuse. For example, an emulation environment where the software is run executable. Also a container where the software and its dependencies are all encapsulated. Or it could be that the software is made available via a package management system.",                                                                                                                                           
         "id": "R:q1",
         "principle": "Reuseable: Software is both usable (it can be executed) and reusable (it can be understood, modified, built upon, or incorporated into other software).",                                                                                                                                                       
@@ -399,6 +413,7 @@
                 "text": "Machine readable standard license"
             }
         ],
+        "aspect": "R",
         "guidance": "Standard licenses are those that are widely recognised. Licences are often referred to by name, but machine readable licenses can be specified by reference to a standard vocabulary such as SPDX, or are encoded in a machine readable format such as RDF/XML in the metadata record for the software.  Ideally the license deed is available in the package or linked to by a standard URL. Note that Creative Commons licenses are not recommended for software.",               
         "id": "R:q2",
         "principle": "R1.1. Software is given a clear and accessible licence.",
@@ -427,6 +442,7 @@
                 "text": "Comprehensively recorded in a machine readable format"
             }
         ],
+        "aspect": "R",
         "guidance": "Provenance answers the \"who, what, when, where, why and how\" for the development of the software. Providing detailed provenance gives a user the details they need to trust that the software will do what they expect it to do. This extends well beyond whether the software and its development over time has been captured in a version control system. A record of provenance captures information such as the people, their roles in making contributions, the resources committed (for instance grants, people-time, hardware), the time span of a project (or projects) focussed on the work,  the geographic location of the authors or their affiliations with organisations, the project objectives or intent in producing the software and the agreed upon process, systems and/or constraints (including changes in licensing) on the development of the software. All of this detail can help to interpret and understand how and why the software came to be, and to engender trust in reuse. A partial capture of provenance captures only some of this detail. This detail can also be comprehensive but not machine readable. Examples of machine readable provenance standards include PROV, and formats include RDF, JSON, NetCDF, XML, etc.",                                                               
         "id": "R:q3",
         "principle": "R1.2. Software is associated with detailed provenance.",
@@ -455,6 +471,7 @@
                 "text": "Qualified links to other software are recorded in a machine readable format"
             }
         ],
+        "aspect": "R",
         "guidance": "A qualified reference is a pointer to an external object, with a clear authority for resolving/confirming that identity given in the form of the reference. Ideally this is in a form that includes a resolver within the reference (e.g., in the form of a URI). For software this would mean referring to other software via a resolvable, qualified permanent identifier. In metadata this is only possible when software is able to be referred to in this fashion. Not all software can be referred to in this way. A qualified reference in software is presently technically difficult or impossible in many languages, where conventional practice is to use a (unqualified) reference via a (possibly non-unique) name, possibly in combination with a version number.",                                         
         "id": "R:q4",
         "principle": "R2. Software includes qualified references to other software.",
@@ -478,6 +495,7 @@
                 "text": "Uses domain-relevant standards"
             }
         ],
+        "aspect": "R",
         "guidance": "Relevant research domains are determined by the intended user base of the software, not any possible community of use for a piece of software. A piece of software created to address the needs of a community should be aware of any standards put forward by that community or adjacent ones. Similarly, a piece of software (such as analysis code) which is intended to represent work done within a domain-community should also be aware of any standards put forward by that community or adjacent ones. Some examples of domain-relevant community standards are: (e.g. CoC, Credit to authors and collaborations, institutional standards, registry standards, nomenclature described within a community)",                                                                                                      
         "id": "R:q5",
         "principle": "R3. Software meets domain-relevant community standards.",
