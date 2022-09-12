@@ -1,6 +1,5 @@
 <template>
     <div class="question">
-        <h3>{{ index + 1 }}. {{ question.id }}</h3>
         <fieldset>
             <legend>{{ question.text }}</legend>
 
@@ -12,7 +11,6 @@
                 v-bind:key="answer.id"
                 v-bind:onClick="onClick(index)"
             />
-
         </fieldset>
     </div>
 </template>
@@ -29,7 +27,8 @@ const props = defineProps<{
             id: string,
             score: number,
             text: string
-        }[]
+        }[],
+        aspect: string,
         guidance: string,
         id: string,
         text: string
@@ -43,7 +42,6 @@ const onClick = (index: number) => {
         setQueryParams(newCompliance);
     }
 }
-
 </script>
 
 <style scoped>
