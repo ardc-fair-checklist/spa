@@ -28,9 +28,7 @@ const props = defineProps<{
             score: number,
             text: string
         }[],
-        aspect: string,
         guidance: string,
-        id: string,
         text: string
     }
 }>()
