@@ -1,0 +1,53 @@
+{
+    "$schema": "https://json-schema.org/draft-07/schema",
+    "items": {
+        "additionalProperties": false,
+        "properties": {
+            "answers": {
+                "items": {
+                    "additionalProperties": false,
+                    "properties": {
+                        "id": {
+                            "type": "string"
+                        },
+                        "score": {
+                            "minimum": 0,
+                            "type": "integer"
+                        },
+                        "text": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "id",
+                        "score",
+                        "text"
+                    ],
+                    "type": "object"
+                },
+                "minItems": 2,
+                "type": "array",
+                "uniqueItems": true
+            },
+            "guidance": {
+                "type": "string"
+            },
+            "id": {
+                "type": "string"
+            },
+            "principle": {
+                "type": "string"
+            },
+            "text": {
+                "type": "string"
+            }
+        },
+        "required": [
+            "answers"
+        ],
+        "type": "object"
+    },
+    "minItems": 1,
+    "type": "array",
+    "uniqueItems": true
+}

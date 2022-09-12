@@ -1,24 +1,20 @@
 # Developer documentation
 
-This project was initialized with `create-vite`:
 
-```shell
-npx create-vite ardc-fair-checklist
-```
+## Tech stack
 
-Recommend using Volar VSCode extension for improved development experience.
+1. [Vue 3](https://vuejs.org/) 
+1. [Vite](https://vitejs.dev/)
+1. [TypeScript](https://www.typescriptlang.org/)
 
+## IDE / dev setup
 
+We recommend using Volar VSCode extension for improved development experience. The project uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
-## Vue 3 + TypeScript + Vite
+1. [VS Code](https://code.visualstudio.com/)
+1. [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
-
-### Recommended IDE Setup
-
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
-
-### Type Support For `.vue` Imports in TS
+### Type Support For `.vue` Imports in TS using Volar TakeOver mode
 
 Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's Take Over mode by following these steps:
 
@@ -26,3 +22,16 @@ Since TypeScript cannot handle type information for `.vue` imports, they are shi
 2. Reload the VS Code window by running `Developer: Reload Window` from the command palette.
 
 You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/volar/discussions/471).
+
+## TODO
+
+1. ~~add points to questions~~
+1. ~~show points in interface for the time being~~
+1. calculate partial and total progress
+1. ~~write jsonschema for questions~~
+1. add testing as prose
+1. implement testing prose
+1. publish coverage in ci
+1. write foundation for versioning of list of questions
+1. add validation of query parameters
+1. revisit questions content with TomH

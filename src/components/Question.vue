@@ -23,14 +23,15 @@ import { compliance } from '../store'
 import { setQueryParams } from '../routing'
 
 const props = defineProps<{
-    index: number
+    index: number,
     question: {
         answers: {
-            text: string,
-            id: string
+            id: string,
+            score: number,
+            text: string
         }[]
-        guidance: string
-        id: string
+        guidance: string,
+        id: string,
         text: string
     }
 }>()
@@ -55,6 +56,7 @@ p.guidance {
     font-size: smaller;
     margin-bottom: 4em;
     margin-top: 2em;
+    display: none;
 }
 
 .question {
