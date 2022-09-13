@@ -1,13 +1,20 @@
 import { computed, ref } from 'vue'
+import { nQuestions } from './read-questions'
 
-const nQuestions = 18;
-const state = ref("0".repeat(nQuestions));
+const state = ref(".".repeat(nQuestions.total).split('').map(() => 0))
+
 
 export const compliance = computed(() => state.value);
-export const setCompliance = (newCompliance: string) => state.value = newCompliance;
+export const setComplianceAt = (index: number, newCompliance: number) => state.value[index] = newCompliance
+export const setCompliance = (newCompliance: number[]) => state.value = newCompliance
 
-
-export const complianceQueryParams = computed(() => `&f=${compliance.value.slice(0, 6)}` +
-                                                    `&a=${compliance.value.slice(6, 10)}` +
-                                                    `&i=${compliance.value.slice(10, 12)}` +
-                                                    `&r=${compliance.value.slice(12, 18)})`)
+//const summation = (previousValue: number, currentValue: number) => previousValue + currentValue;
+//export const progress = computed(() => {
+//    return {
+//        F: `${100 * state.value.score.slice(...slices.F).reduce(summation) / nPointsMax.F}%`,
+//        A: `${100 * state.value.score.slice(...slices.A).reduce(summation) / nPointsMax.A}%`,
+//        I: `${100 * state.value.score.slice(...slices.I).reduce(summation) / nPointsMax.I}%`,
+//        R: `${100 * state.value.score.slice(...slices.R).reduce(summation) / nPointsMax.R}%`,
+//        overall: `${100 * state.value.score.reduce(summation) / nPointsMax.total}%`
+//    }
+//})

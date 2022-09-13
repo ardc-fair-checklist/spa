@@ -5,11 +5,11 @@
 
             <p class="guidance">{{ question.guidance }}</p>
 
-            <Answer v-for="(answer, index) in question.answers"
+            <Answer v-for="(answer, iAnswer) in question.answers"
                 v-bind:answer="answer"
-                v-bind:isChecked="isChecked(index)"
+                v-bind:isChecked="compliance[question.index] === iAnswer"
                 v-bind:key="answer.id"
-                v-bind:onClick="onClick(index)"
+                v-bind:onClick="onClick(iAnswer)"
             />
         </fieldset>
     </div>
@@ -21,7 +21,6 @@ import { compliance } from '../store'
 import { setQueryParams } from '../routing'
 
 const props = defineProps<{
-    index: number,
     question: {
         answers: {
             id: string,
@@ -29,14 +28,18 @@ const props = defineProps<{
             text: string
         }[],
         guidance: string,
+        index: number,
         text: string
     }
 }>()
 
-const isChecked = (index: number) => parseInt(compliance.value[props.index], 10) === index;
 const onClick = (index: number) => {
     return () => {
-        const newCompliance = compliance.value.slice(0, props.index) + index.toString() +  compliance.value.slice(props.index + 1);
+        const newCompliance = [
+            ...compliance.value.slice(0, props.question.index),
+            index,
+            ...compliance.value.slice(props.question.index + 1)
+        ]
         setQueryParams(newCompliance);
     }
 }
