@@ -44,7 +44,7 @@ const onClick = (index: number) => {
 
 <style scoped>
 fieldset {
-    margin-bottom: 5em;
+    margin-bottom: 3em;
     width: 40em;
 }
 

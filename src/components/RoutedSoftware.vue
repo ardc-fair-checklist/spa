@@ -1,14 +1,15 @@
 <template>
     <main>
         <h1>ARDC FAIR for software self-assessment checklist</h1>
-        <h2>Questions</h2>
         <p>Answer the {{ questions.length }} questions below to assess your software's FAIRness.</p>
         <div class="aspect" v-for="aspect in ['F', 'A', 'I', 'R']" >
+            <h2>{{ getFullAspect(aspect) }}</h2>
             <Question v-for="(question, index) in questions.filter(q => q.aspect === aspect)"
                 v-bind:index="index"
                 v-bind:key="question.id"
                 v-bind:question="question"
             />
+            <p>{{ getFullAspect(aspect) }} state:</p>
             <ProgressBar v-if="aspect==='F'" v-bind:progress="progress.F"/>
             <ProgressBar v-if="aspect==='A'" v-bind:progress="progress.A"/>
             <ProgressBar v-if="aspect==='I'" v-bind:progress="progress.I"/>
@@ -30,6 +31,14 @@ const progress = {
     I: '30%',
     R: '40%',
     overall: '50%'
+}
+const getFullAspect = (aspect: string) => {
+    return {
+        F: "Findability",
+        A: "Accessibility",
+        I: "Interoperability",
+        R: "Reuseability"
+    }[aspect]
 }
 </script>
 
