@@ -26,14 +26,15 @@ You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/
 ## TODO
 
 1. ~~add points to questions~~
-1. ~~show points in interface for the time being~~
-1. ~~calculate partial and total progress~~
-1. ~~write jsonschema for questions~~
-1. add testing as prose
-1. implement testing prose
-1. publish coverage in ci
-1. write foundation for versioning of list of questions
-1. add validation of query parameters
-1. revisit questions content with TomH
-1. investigate migrating to SSR
+2. ~~show points in interface for the time being~~
+4. ~~calculate partial and total progress~~
+5. ~~write jsonschema for questions~~
+7. add testing as prose
+8. implement testing prose
+9. publish coverage in ci
+10. write foundation for versioning of list of questions
+11. add validation of query parameters
+12. use the checklist for a couple of existing software packages
+13. revisit questions content with TomH
+14. investigate migrating to SSR
 
