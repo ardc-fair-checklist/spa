@@ -29,10 +29,10 @@ export const router = createRouter({
 
 
 const guard = async (to: any, _: any) => {
-    const f: string = to.query.f ? to.query.f : '0'.repeat(nQuestions.F)
-    const a: string = to.query.a ? to.query.a : '0'.repeat(nQuestions.A)
-    const i: string = to.query.i ? to.query.i : '0'.repeat(nQuestions.I)
-    const r: string = to.query.r ? to.query.r : '0'.repeat(nQuestions.R)
+    const f: string = to.query.f ? to.query.f : '0'.repeat(nQuestions.f)
+    const a: string = to.query.a ? to.query.a : '0'.repeat(nQuestions.a)
+    const i: string = to.query.i ? to.query.i : '0'.repeat(nQuestions.i)
+    const r: string = to.query.r ? to.query.r : '0'.repeat(nQuestions.r)
     setCompliance((f + a + i + r).split('').map(elem => parseInt(elem, 10)))
 }
 
@@ -42,10 +42,10 @@ export const setQueryParams = (newCompliance: number[]) => {
     const [major, minor] = metadata.version.split('.').slice(0, 2)
     const query = {
         v: `${major}.${minor}`,
-        f: newCompliance.slice(...slices.F).map(elem => elem.toString()).join(''),
-        a: newCompliance.slice(...slices.A).map(elem => elem.toString()).join(''),
-        i: newCompliance.slice(...slices.I).map(elem => elem.toString()).join(''),
-        r: newCompliance.slice(...slices.R).map(elem => elem.toString()).join('')
+        f: newCompliance.slice(...slices.f).map(elem => elem.toString()).join(''),
+        a: newCompliance.slice(...slices.a).map(elem => elem.toString()).join(''),
+        i: newCompliance.slice(...slices.i).map(elem => elem.toString()).join(''),
+        r: newCompliance.slice(...slices.r).map(elem => elem.toString()).join('')
     }
     router.push({query})
 }

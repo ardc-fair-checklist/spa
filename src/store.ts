@@ -1,20 +1,21 @@
 import { computed, ref } from 'vue'
-import { nQuestions } from './read-questions'
+import { questions, nQuestions, slices, nPointsMax } from './read-questions'
 
-const state = ref(".".repeat(nQuestions.total).split('').map(() => 0))
-
+const scoreArrays = questions.map(q => q.answers.map(a => a.score))
+const state = ref<number[]>(new Array(nQuestions.total).fill(0))
 
 export const compliance = computed(() => state.value);
-export const setComplianceAt = (index: number, newCompliance: number) => state.value[index] = newCompliance
 export const setCompliance = (newCompliance: number[]) => state.value = newCompliance
 
-//const summation = (previousValue: number, currentValue: number) => previousValue + currentValue;
-//export const progress = computed(() => {
-//    return {
-//        F: `${100 * state.value.score.slice(...slices.F).reduce(summation) / nPointsMax.F}%`,
-//        A: `${100 * state.value.score.slice(...slices.A).reduce(summation) / nPointsMax.A}%`,
-//        I: `${100 * state.value.score.slice(...slices.I).reduce(summation) / nPointsMax.I}%`,
-//        R: `${100 * state.value.score.slice(...slices.R).reduce(summation) / nPointsMax.R}%`,
-//        overall: `${100 * state.value.score.reduce(summation) / nPointsMax.total}%`
-//    }
-//})
+const summation = (previousValue: number, currentValue: number) => previousValue + currentValue;
+export const scores = computed(() => state.value.map((iAnswer, iQuestion) => scoreArrays[iQuestion][iAnswer]))
+
+export const progress = computed(() => {
+    return {
+        f: `${100 * scores.value.slice(...slices.f).reduce(summation, 0) / nPointsMax.f}%`,
+        a: `${100 * scores.value.slice(...slices.a).reduce(summation, 0) / nPointsMax.a}%`,
+        i: `${100 * scores.value.slice(...slices.i).reduce(summation, 0) / nPointsMax.i}%`,
+        r: `${100 * scores.value.slice(...slices.r).reduce(summation, 0) / nPointsMax.r}%`,
+        overall: `${100 * scores.value.reduce(summation) / nPointsMax.total}%`
+    }
+})

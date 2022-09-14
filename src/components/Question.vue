@@ -17,7 +17,7 @@
 
 <script setup lang="ts">
 import Answer from './Answer.vue'
-import { compliance } from '../store'
+import { compliance, scores } from '../store'
 import { setQueryParams } from '../routing'
 
 const props = defineProps<{

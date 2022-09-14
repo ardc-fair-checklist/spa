@@ -15,25 +15,25 @@ const deriveNumberOfQuestions = (aspect: "F" | "A" | "I" | "R") => {
 
 
 export const nQuestions = {
-    F: deriveNumberOfQuestions("F"),
-    A: deriveNumberOfQuestions("A"),
-    I: deriveNumberOfQuestions("I"),
-    R: deriveNumberOfQuestions("R"),
+    f: deriveNumberOfQuestions("F"),
+    a: deriveNumberOfQuestions("A"),
+    i: deriveNumberOfQuestions("I"),
+    r: deriveNumberOfQuestions("R"),
     total: questionData.length
 }
 
 export const slices = {
-    F: [0, nQuestions.F],
-    A: [nQuestions.F, nQuestions.F + nQuestions.A],
-    I: [nQuestions.F + nQuestions.A, nQuestions.F + nQuestions.A + nQuestions.I],
-    R: [nQuestions.F + nQuestions.A + nQuestions.I, nQuestions.total],
+    f: [0, nQuestions.f],
+    a: [nQuestions.f, nQuestions.f + nQuestions.a],
+    i: [nQuestions.f + nQuestions.a, nQuestions.f + nQuestions.a + nQuestions.i],
+    r: [nQuestions.f + nQuestions.a + nQuestions.i, nQuestions.total],
 }
 
 export const nPointsMax = {
-    F: derivePointsMax("F"),
-    A: derivePointsMax("A"),
-    I: derivePointsMax("I"),
-    R: derivePointsMax("R"),
+    f: derivePointsMax("F"),
+    a: derivePointsMax("A"),
+    i: derivePointsMax("I"),
+    r: derivePointsMax("R"),
     total: derivePointsMax("*")
 }
 

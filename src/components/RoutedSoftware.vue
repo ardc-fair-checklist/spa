@@ -9,12 +9,12 @@
                 v-bind:question="question"
             />
             <p>{{ getFullAspect(aspect) }} state:</p>
-            <!--<ProgressBar v-if="aspect==='F'" v-bind:progress="progress.F"/>
-            <ProgressBar v-if="aspect==='A'" v-bind:progress="progress.A"/>
-            <ProgressBar v-if="aspect==='I'" v-bind:progress="progress.I"/>
-            <ProgressBar v-if="aspect==='R'" v-bind:progress="progress.R"/>-->
+            <ProgressBar v-if="aspect==='F'" v-bind:progress="progress.f"/>
+            <ProgressBar v-if="aspect==='A'" v-bind:progress="progress.a"/>
+            <ProgressBar v-if="aspect==='I'" v-bind:progress="progress.i"/>
+            <ProgressBar v-if="aspect==='R'" v-bind:progress="progress.r"/>
         </div>
-        <!--<ProgressBar v-bind:progress="progress.overall"/>-->
+        <ProgressBar v-bind:progress="progress.overall"/>
         <Badge />
     </main>
 </template>
@@ -24,14 +24,14 @@ import Badge from './Badge.vue'
 import ProgressBar from './ProgressBar.vue';
 import Question from './Question.vue'
 import { questions, nQuestions } from '../read-questions'
-//import { progress } from '../store'
+import { progress } from '../store'
 
 const getFullAspect = (aspect: string) => {
     return {
-        F: "Findability",
-        A: "Accessibility",
-        I: "Interoperability",
-        R: "Reuseability"
+        F: "Findable",
+        A: "Accessible",
+        I: "Interoperable",
+        R: "Reusable"
     }[aspect]
 }
 </script>
