@@ -70,6 +70,17 @@ footer {
     left: 0;
 }
 
-h1, h2, h3 {
+h1 {
+    line-height: 1.2em;
+    margin-bottom: 2em;
+    margin-top: 3em;
+}
+h2 {
+    line-height: 1.2em;
+    margin-bottom: 1em;
+    margin-top: 2em;
+
+}
+h3 {
     line-height: 1.2em;
 }

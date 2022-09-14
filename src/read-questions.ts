@@ -22,7 +22,14 @@ export const nQuestions = {
     total: questionData.length
 }
 
-export const slices = {
+type Slices = {
+    f: [number, number]
+    a: [number, number]
+    i: [number, number]
+    r: [number, number]
+}
+
+export const slices: Slices = {
     f: [0, nQuestions.f],
     a: [nQuestions.f, nQuestions.f + nQuestions.a],
     i: [nQuestions.f + nQuestions.a, nQuestions.f + nQuestions.a + nQuestions.i],

@@ -1,6 +1,6 @@
 <template>
     <main>
-        <h1>ARDC FAIR for software self-assessment checklist</h1>
+        <h1>ARDC FAIR for software<br>self-assessment checklist</h1>
         <p>Answer the {{ nQuestions.total }} questions below to assess your software's FAIRness.</p>
         <div class="aspect" v-for="aspect in ['F', 'A', 'I', 'R']" >
             <h2>{{ getFullAspect(aspect) }}</h2>
@@ -14,6 +14,7 @@
             <ProgressBar v-if="aspect==='I'" v-bind:progress="progress.i"/>
             <ProgressBar v-if="aspect==='R'" v-bind:progress="progress.r"/>
         </div>
+        <p>FAIR state overall:</p>
         <ProgressBar v-bind:progress="progress.overall"/>
         <Badge />
     </main>
