@@ -27,7 +27,7 @@ You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/
 
 1. ~~add points to questions~~
 1. ~~show points in interface for the time being~~
-1. calculate partial and total progress
+1. ~~calculate partial and total progress~~
 1. ~~write jsonschema for questions~~
 1. add testing as prose
 1. implement testing prose
@@ -35,3 +35,5 @@ You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/
 1. write foundation for versioning of list of questions
 1. add validation of query parameters
 1. revisit questions content with TomH
+1. investigate migrating to SSR
+
