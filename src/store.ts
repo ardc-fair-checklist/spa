@@ -8,7 +8,7 @@ export const compliance = computed(() => state.value);
 export const setCompliance = (newCompliance: number[]) => state.value = newCompliance
 
 const summation = (previousValue: number, currentValue: number) => previousValue + currentValue;
-export const scores = computed(() => state.value.map((iAnswer, iQuestion) => scoreArrays[iQuestion][iAnswer]))
+const scores = computed(() => state.value.map((iAnswer, iQuestion) => scoreArrays[iQuestion][iAnswer]))
 
 export const progress = computed(() => {
     return {
@@ -19,3 +19,9 @@ export const progress = computed(() => {
         overall: `${100 * scores.value.reduce(summation) / nPointsMax.total}%`
     }
 })
+
+export const fairQueryParams = computed(() =>
+    `&f=${compliance.value.slice(...slices.f).map(elem => elem.toString()).join('')}` +
+    `&a=${compliance.value.slice(...slices.a).map(elem => elem.toString()).join('')}` +
+    `&i=${compliance.value.slice(...slices.i).map(elem => elem.toString()).join('')}` +
+    `&r=${compliance.value.slice(...slices.r).map(elem => elem.toString()).join('')}`)
