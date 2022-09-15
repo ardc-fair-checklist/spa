@@ -12,12 +12,6 @@ defineProps<{
 </script>
 
 <style scoped>
-progress {
-    border-radius: 0px;
-    width: 100%;
-    accent-color: #cc0070;
-}
-
 .outer {
     background-color: #808080;
     width: 100%;
@@ -30,6 +24,6 @@ progress {
 .inner {
     background-color: #8E489B;
     height: 0.6em;
-    width: v-bind('progress');
+    width: v-bind('progress');  /* CSS Vue magic here */
 }
 </style>
