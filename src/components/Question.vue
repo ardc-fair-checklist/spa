@@ -1,10 +1,8 @@
 <template>
     <div class="question">
+        <h3>{{ `${question.index + 1}. ${question.text}` }}</h3>
         <fieldset>
-            <legend>{{ question.text }}</legend>
-
             <p class="guidance">{{ question.guidance }}</p>
-
             <Answer v-for="(answer, answerIndex) in question.answers"
                 v-bind:answer="answer"
                 v-bind:isChecked="compliance[question.index] === answerIndex"
