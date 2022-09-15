@@ -13,7 +13,6 @@ const deriveNumberOfQuestions = (aspect: "F" | "A" | "I" | "R") => {
     return questionData.filter(question => question.aspect === aspect).length
 }
 
-
 export const nQuestions = {
     f: deriveNumberOfQuestions("F"),
     a: deriveNumberOfQuestions("A"),
