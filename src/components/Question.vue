@@ -5,11 +5,11 @@
 
             <p class="guidance">{{ question.guidance }}</p>
 
-            <Answer v-for="(answer, iAnswer) in question.answers"
+            <Answer v-for="(answer, answerIndex) in question.answers"
                 v-bind:answer="answer"
-                v-bind:isChecked="compliance[question.index] === iAnswer"
+                v-bind:isChecked="compliance[question.index] === answerIndex"
                 v-bind:key="answer.id"
-                v-bind:onClick="onClick(iAnswer)"
+                v-bind:onClick="onClick(answerIndex)"
             />
         </fieldset>
     </div>
@@ -17,7 +17,7 @@
 
 <script setup lang="ts">
 import Answer from './Answer.vue'
-import { compliance, scores } from '../store'
+import { compliance } from '../store'
 import { setQueryParams } from '../routing'
 
 const props = defineProps<{
@@ -33,11 +33,11 @@ const props = defineProps<{
     }
 }>()
 
-const onClick = (index: number) => {
+const onClick = (answerIndex: number) => {
     return () => {
         const newCompliance = [
             ...compliance.value.slice(0, props.question.index),
-            index,
+            answerIndex,
             ...compliance.value.slice(props.question.index + 1)
         ]
         setQueryParams(newCompliance);
@@ -46,26 +46,4 @@ const onClick = (index: number) => {
 </script>
 
 <style scoped>
-fieldset {
-    margin-bottom: 3em;
-    width: 40em;
-}
-
-p.guidance {
-    font-size: smaller;
-    margin-bottom: 4em;
-    margin-top: 2em;
-    display: none;
-}
-
-.question {
-    display: flex;
-    place-items: center;
-    flex-direction: column;
-}
-
-h3 {
-    place-self: flex-start;
-}
-
 </style>
