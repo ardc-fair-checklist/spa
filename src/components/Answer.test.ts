@@ -17,32 +17,32 @@ describe('after mounting an Answer component', () => {
     const wrapper = mount(Answer, { props });
 
     test('it has a property named answer', () => {
-        expect(wrapper.vm.answer).toBeDefined()
-        expect(wrapper.vm.answer).toBeTypeOf('object')
+        expect(wrapper.props('answer')).toBeDefined()
+        expect(wrapper.props('answer')).toBeTypeOf('object')
     })
 
     test('it has the correct answer id', () => {
-        expect(wrapper.vm.answer.id).toBeDefined()
-        expect(wrapper.vm.answer.id).toBe(props.answer.id)
+        expect(wrapper.props('answer').id).toBeDefined()
+        expect(wrapper.props('answer').id).toBe(props.answer.id)
     })
 
     test('it has the correct answer score', () => {
-        expect(wrapper.vm.answer.score).toBeDefined()
-        expect(wrapper.vm.answer.score).toBe(props.answer.score)
+        expect(wrapper.props('answer').score).toBeDefined()
+        expect(wrapper.props('answer').score).toBe(props.answer.score)
     })
 
     test('it has the correct answer text', () => {
-        expect(wrapper.vm.answer.text).toBeDefined()
-        expect(wrapper.vm.answer.text).toBe(props.answer.text)
+        expect(wrapper.props('answer').text).toBeDefined()
+        expect(wrapper.props('answer').text).toBe(props.answer.text)
     })
 
     test('it has the correct isChecked value', () => {
-        expect(wrapper.vm.isChecked).toBeDefined()
-        expect(wrapper.vm.isChecked).toBe(props.isChecked)
+        expect(wrapper.props('isChecked')).toBeDefined()
+        expect(wrapper.props('isChecked')).toBe(props.isChecked)
     })
 
     test('it has the correct onClick method', () => {
-        expect(wrapper.vm.onClick).toBeDefined()
-        expect(wrapper.vm.onClick).toBe(props.onClick)
+        expect(wrapper.props('onClick')).toBeDefined()
+        expect(wrapper.props('onClick')).toBe(props.onClick)
     })
 })

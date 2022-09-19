@@ -24,32 +24,32 @@ describe('after mounting a Question component', () => {
     const wrapper = mount(Question, { props });
 
     test('it has a property named question', () => {
-        expect(wrapper.vm.question).toBeDefined()
-        expect(wrapper.vm.question).toBeTypeOf('object')
+        expect(wrapper.props('question')).toBeDefined()
+        expect(wrapper.props('question')).toBeTypeOf('object')
     })
 
     test('it has the correct question answers array', () => {
-        expect(wrapper.vm.question.answers).toBeDefined()
-        expect(wrapper.vm.question.answers).toBeInstanceOf(Array)
-        expect(wrapper.vm.question.answers).toStrictEqual(props.question.answers)
+        expect(wrapper.props('question').answers).toBeDefined()
+        expect(wrapper.props('question').answers).toBeInstanceOf(Array)
+        expect(wrapper.props('question').answers).toStrictEqual(props.question.answers)
     })
 
     test('it has the correct question guidance string', () => {
-        expect(wrapper.vm.question.guidance).toBeDefined()
-        expect(wrapper.vm.question.guidance).toBeTypeOf('string')
-        expect(wrapper.vm.question.guidance).toBe(props.question.guidance)
+        expect(wrapper.props('question').guidance).toBeDefined()
+        expect(wrapper.props('question').guidance).toBeTypeOf('string')
+        expect(wrapper.props('question').guidance).toBe(props.question.guidance)
     })
 
     test('it has the correct question index', () => {
-        expect(wrapper.vm.question.index).toBeDefined()
-        expect(wrapper.vm.question.index).toBeTypeOf('number')
-        expect(wrapper.vm.question.index).toBe(props.question.index)
+        expect(wrapper.props('question').index).toBeDefined()
+        expect(wrapper.props('question').index).toBeTypeOf('number')
+        expect(wrapper.props('question').index).toBe(props.question.index)
     })
 
     test('it has the correct question text', () => {
-        expect(wrapper.vm.question.text).toBeDefined()
-        expect(wrapper.vm.question.text).toBeTypeOf('string')
-        expect(wrapper.vm.question.text).toBe(props.question.text)
+        expect(wrapper.props('question').text).toBeDefined()
+        expect(wrapper.props('question').text).toBeTypeOf('string')
+        expect(wrapper.props('question').text).toBe(props.question.text)
     })
 
 })
