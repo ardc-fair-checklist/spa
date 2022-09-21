@@ -5,6 +5,7 @@
 
 1. [Vue 3](https://vuejs.org/) 
 1. [Vite](https://vitejs.dev/)
+1. [Vitest](https://vitest.dev/)
 1. [TypeScript](https://www.typescriptlang.org/)
 
 ## IDE / dev setup
@@ -50,4 +51,4 @@ There is a GitHub action `/.github/workflows/publish.yml` that builds the projec
 1. add validation of query parameters
 1. use the checklist for a couple of existing software packages
 1. revisit questions content with TomH
-1. investigate migrating to ~~SSR~~SSG
+1. investigate migrating to ~~SSR~~SSG [Prerendering](https://vite-plugin-ssr.com/)
