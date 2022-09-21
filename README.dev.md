@@ -49,5 +49,4 @@ There is a GitHub action `/.github/workflows/publish.yml` that builds the projec
 11. add validation of query parameters
 12. use the checklist for a couple of existing software packages
 13. revisit questions content with TomH
-14. investigate migrating to SSR
-
+14. investigate migrating to ~~SSR~~SSG
