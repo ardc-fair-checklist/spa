@@ -1,4 +1,4 @@
-name: publish
+name: publishing
 
 # This workflow is triggered manually. It creates a production build off of main branch
 # and publishes it to GitHub pages https://ardc-fair-checklist.github.io/ardc-fair-checklist
