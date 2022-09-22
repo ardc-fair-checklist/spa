@@ -26,8 +26,11 @@
 import Badge from './Badge.vue'
 import ProgressBar from './ProgressBar.vue';
 import Question from './Question.vue'
-import { questions, nQuestions } from '../read-questions'
+import { setQuestions, nQuestions, type QuestionType, questions } from '../store'
 import { progress } from '../store'
+import data from '../assets/0.1/questions.json'
+
+setQuestions(data as QuestionType[])
 
 const getFullAspect = (aspect: string) => {
     return {

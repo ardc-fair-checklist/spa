@@ -1,5 +1,4 @@
-import { compliance, setCompliance, progress, fairQueryParams } from './store'
-import { nQuestions } from './read-questions'
+import { compliance, setCompliance, progress, fairQueryParams, nQuestions } from './store'
 import { beforeEach, describe, expect, test } from 'vitest'
 
 const zeros = new Array(nQuestions.total).fill(0);

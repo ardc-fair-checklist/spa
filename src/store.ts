@@ -1,30 +1,95 @@
 import { computed, ref } from 'vue'
-import { questions, nQuestions, slices, nPointsMax } from './read-questions'
 
+export type AnswerType = {
+    id: string,
+    score: number,
+    text: string
+}
 
-const state = ref<number[]>(new Array(nQuestions.total).fill(0))
+export type QuestionType = {
+    answers: AnswerType[],
+    aspect: "F" | "A" | "I" | "R",
+    guidance: string,
+    id: string,
+    principle: string,
+    text: string
+}
 
-export const compliance = computed(() => state.value);
+const state = ref({
+    compliance: [] as number[],
+    questions: [] as (QuestionType & { index: number })[]
+})
 
-export const fairQueryParams = computed(() =>
-    `&f=${compliance.value.slice(...slices.f).map(elem => elem.toString()).join('')}` +
-    `&a=${compliance.value.slice(...slices.a).map(elem => elem.toString()).join('')}` +
-    `&i=${compliance.value.slice(...slices.i).map(elem => elem.toString()).join('')}` +
-    `&r=${compliance.value.slice(...slices.r).map(elem => elem.toString()).join('')}`)
+export const compliance = computed(() => state.value.compliance);
+export const questions = computed(() => state.value.questions);
+export const setCompliance = (newCompliance: number[]) => state.value.compliance = newCompliance
+export const setQuestions = (questions: QuestionType[]) => {
+    // add index
+    state.value.questions = (questions as QuestionType[]).map((q, i) => ({...q, index: i}))
+}
 
-export const progress = computed(() => {
-    const scores = computed(() => {
-        const scoreArrays = questions.map(q => q.answers.map(a => a.score))
-        return state.value.map((iAnswer, iQuestion) => scoreArrays[iQuestion][iAnswer])
-    })
-    const summation = (previousValue: number, currentValue: number) => previousValue + currentValue;
+export const nQuestions = computed(() => {
+    const deriveNumberOfQuestions = (aspect: "F" | "A" | "I" | "R") => {
+        return state.value.questions.filter(question => question.aspect === aspect).length
+    }
     return {
-        f: `${100 * scores.value.slice(...slices.f).reduce(summation, 0) / nPointsMax.f}%`,
-        a: `${100 * scores.value.slice(...slices.a).reduce(summation, 0) / nPointsMax.a}%`,
-        i: `${100 * scores.value.slice(...slices.i).reduce(summation, 0) / nPointsMax.i}%`,
-        r: `${100 * scores.value.slice(...slices.r).reduce(summation, 0) / nPointsMax.r}%`,
-        overall: `${100 * scores.value.reduce(summation) / nPointsMax.total}%`
+        f: deriveNumberOfQuestions("F"),
+        a: deriveNumberOfQuestions("A"),
+        i: deriveNumberOfQuestions("I"),
+        r: deriveNumberOfQuestions("R"),
+        total: state.value.questions.length
     }
 })
 
-export const setCompliance = (newCompliance: number[]) => state.value = newCompliance
+export const nPointsMax = computed(() => {
+    const derivePointsMax = (aspect: "F" | "A" | "I" | "R" | "*") => {
+        let selectedQuestions = state.value.questions;
+        if (aspect !== "*") {
+            selectedQuestions = state.value.questions.filter(question => question.aspect === aspect)
+        }
+        return selectedQuestions.map(question => Math.max(...question.answers.map(answer => answer.score)))
+                                .reduce((previousValue, currentValue) => previousValue + currentValue, 0)
+    }
+    return {
+        f: derivePointsMax("F"),
+        a: derivePointsMax("A"),
+        i: derivePointsMax("I"),
+        r: derivePointsMax("R"),
+        total: derivePointsMax("*")
+    }
+})
+
+export const slices = computed(() => {
+    type Slices = {
+        f: [number, number]
+        a: [number, number]
+        i: [number, number]
+        r: [number, number]
+    }
+    return {
+        f: [0, nQuestions.value.f],
+        a: [nQuestions.value.f, nQuestions.value.f + nQuestions.value.a],
+        i: [nQuestions.value.f + nQuestions.value.a, nQuestions.value.f + nQuestions.value.a + nQuestions.value.i],
+        r: [nQuestions.value.f + nQuestions.value.a + nQuestions.value.i, nQuestions.value.total],
+    } as Slices
+})
+
+export const fairQueryParams = computed(() => {
+    return `&f=${state.value.compliance.slice(...slices.value.f).map(elem => elem.toString()).join('')}` +
+           `&a=${state.value.compliance.slice(...slices.value.a).map(elem => elem.toString()).join('')}` +
+           `&i=${state.value.compliance.slice(...slices.value.i).map(elem => elem.toString()).join('')}` +
+           `&r=${state.value.compliance.slice(...slices.value.r).map(elem => elem.toString()).join('')}`
+})
+
+export const progress = computed(() => {
+    const scoreArrays = state.value.questions.map(q => q.answers.map(a => a.score))
+    const scores = state.value.compliance.map((iAnswer, iQuestion) => scoreArrays[iQuestion][iAnswer])
+    const summation = (previousValue: number, currentValue: number) => previousValue + currentValue;
+    return {
+        f: `${100 * scores.slice(...slices.value.f).reduce(summation, 0) / nPointsMax.value.f}%`,
+        a: `${100 * scores.slice(...slices.value.a).reduce(summation, 0) / nPointsMax.value.a}%`,
+        i: `${100 * scores.slice(...slices.value.i).reduce(summation, 0) / nPointsMax.value.i}%`,
+        r: `${100 * scores.slice(...slices.value.r).reduce(summation, 0) / nPointsMax.value.r}%`,
+        overall: `${100 * scores.reduce(summation, 0) / nPointsMax.value.total}%`
+    }
+})
