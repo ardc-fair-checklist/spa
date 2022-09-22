@@ -44,6 +44,7 @@ There is a GitHub action `/.github/workflows/publish.yml` that builds the projec
 1. ~~calculate partial and total progress~~
 1. ~~write jsonschema for questions~~
 1. ~~add rst badge~~
+1. make questions part of the store and settable, derive other variables and make them gettable
 1. publish coverage in ci
 1. add testing as prose
 1. implement testing prose
