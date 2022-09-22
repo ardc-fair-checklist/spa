@@ -43,10 +43,10 @@ There is a GitHub action `/.github/workflows/publish.yml` that builds the projec
 1. ~~show points in interface for the time being~~
 1. ~~calculate partial and total progress~~
 1. ~~write jsonschema for questions~~
-1. add rst badge
+1. ~~add rst badge~~
+1. publish coverage in ci
 1. add testing as prose
 1. implement testing prose
-1. publish coverage in ci
 1. write foundation for versioning of list of questions
 1. add validation of query parameters
 1. use the checklist for a couple of existing software packages
