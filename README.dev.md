@@ -53,3 +53,4 @@ There is a GitHub action `/.github/workflows/publish.yml` that builds the projec
 1. use the checklist for a couple of existing software packages
 1. revisit questions content with TomH
 1. investigate migrating to ~~SSR~~SSG [Prerendering](https://vite-plugin-ssr.com/)
+1. investigate using tailwindcss for styling
