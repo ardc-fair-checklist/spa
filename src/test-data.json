@@ -1,0 +1,78 @@
+[
+    {
+        "answers": [
+            {
+                "id": "F:q0:a0",
+                "score": 0,
+                "text": "text F:q0:a0"
+            },
+            {
+                "id": "F:q0:a1",
+                "score": 1,
+                "text": "text F:q0:a1"
+            }
+        ],
+        "aspect": "F",
+        "guidance": "guidance F:q0",
+        "id": "F:q0",
+        "principle": "principle F:q0",
+        "text": "text F:q0"
+    },
+    {
+        "answers": [
+            {
+                "id": "A:q0:a0",
+                "score": 0,
+                "text": "text A:q0:a0"
+            },
+            {
+                "id": "A:q0:a1",
+                "score": 1,
+                "text": "text A:q0:a1"
+            }
+        ],
+        "aspect": "A",
+        "guidance": "guidance A:q0",
+        "id": "A:q0",
+        "principle": "principle A:q0",
+        "text": "text A:q0"
+    },
+    {
+        "answers": [
+            {
+                "id": "I:q0:a0",
+                "score": 0,
+                "text": "text I:q0:a0"
+            },
+            {
+                "id": "I:q0:a1",
+                "score": 1,
+                "text": "text I:q0:a1"
+            }
+        ],
+        "aspect": "I",
+        "guidance": "guidance I:q0",
+        "id": "I:q0",
+        "principle": "principle I:q0",
+        "text": "text I:q0"
+    },
+    {
+        "answers": [
+            {
+                "id": "R:q0:a0",
+                "score": 0,
+                "text": "text R:q0:a0"
+            },
+            {
+                "id": "R:q0:a1",
+                "score": 1,
+                "text": "text R:q0:a1"
+            }
+        ],
+        "aspect": "R",
+        "guidance": "guidance R:q0",
+        "id": "R:q0",
+        "principle": "principle R:q0",
+        "text": "text R:q0"
+    }
+]

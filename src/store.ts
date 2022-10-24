@@ -26,6 +26,7 @@ export const setCompliance = (newCompliance: number[]) => state.value.compliance
 export const setQuestions = (questions: QuestionType[]) => {
     // add index
     state.value.questions = (questions as QuestionType[]).map((q, i) => ({...q, index: i}))
+    state.value.compliance = new Array(questions.length).fill(0);
 }
 
 export const nQuestions = computed(() => {
