@@ -86,6 +86,15 @@ export const progress = computed(() => {
     const scoreArrays = state.value.questions.map(q => q.answers.map(a => a.score))
     const scores = state.value.compliance.map((iAnswer, iQuestion) => scoreArrays[iQuestion][iAnswer])
     const summation = (previousValue: number, currentValue: number) => previousValue + currentValue;
+    if (nQuestions.value.total === 0) {
+        return {
+            f: '0%',
+            a: '0%',
+            i: '0%',
+            r: '0%',
+            overall: '0%'
+        }
+    }
     return {
         f: `${100 * scores.slice(...slices.value.f).reduce(summation, 0) / nPointsMax.value.f}%`,
         a: `${100 * scores.slice(...slices.value.a).reduce(summation, 0) / nPointsMax.value.a}%`,
