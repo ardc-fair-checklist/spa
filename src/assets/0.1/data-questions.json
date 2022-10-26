@@ -3,22 +3,22 @@
         {
             "answers": [
                 {
-                    "id": "",
+                    "id": "F:q0:a0",
                     "score": 0,
                     "text": "No identifier"
                 },
                 {
-                    "id": "",
+                    "id": "F:q0:a1",
                     "score": 1,
                     "text": "Local identifier"
                 },
                 {
-                    "id": "",
+                    "id": "F:q0:a2",
                     "score": 3,
                     "text": "Web address (URL)"
                 },
                 {
-                    "id": "",
+                    "id": "F:q0:a3",
                     "score": 8,
                     "text": "Globally Unique, citable and persistent (e.g. DOI, PURL, ARK or Handle)"
                 }
@@ -32,12 +32,12 @@
         {
             "answers": [
                 {
-                    "id": "",
+                    "id": "F:q1:a0",
                     "score": 0,
                     "text": "No"
                 },
                 {
-                    "id": "",
+                    "id": "F:q1:a1",
                     "score": 1,
                     "text": "Yes"
                 }
@@ -51,22 +51,22 @@
         {
             "answers": [
                 {
-                    "id": "",
+                    "id": "F:q2:a0",
                     "score": 0,
                     "text": "The data is not described."
                 },
                 {
-                    "id": "",
+                    "id": "F:q2:a1",
                     "score": 2,
                     "text": "Brief title and description."
                 },
                 {
-                    "id": "",
+                    "id": "F:q2:a2",
                     "score": 3,
                     "text": "Comprehensively, but in a text-based, non-standard format."
                 },
                 {
-                    "id": "",
+                    "id": "F:q2:a3",
                     "score": 4,
                     "text": "Comprehensively (see suggestion) using a recognised formal machine-readable metadata schema."                                                                                                                    
                 }
@@ -80,27 +80,27 @@
         {
             "answers": [
                 {
-                    "id": "",
+                    "id": "F:q3:a0",
                     "score": 0,
                     "text": "The data is not described in any repository"
                 },
                 {
-                    "id": "",
+                    "id": "F:q3:a1",
                     "score": 2,
                     "text": "Local institutional repository"
                 },
                 {
-                    "id": "",
+                    "id": "F:q3:a2",
                     "score": 2,
                     "text": "Domain-specific repository"
                 },
                 {
-                    "id": "",
+                    "id": "F:q3:a3",
                     "score": 2,
                     "text": "Generalist public repository"
                 },
                 {
-                    "id": "",
+                    "id": "F:q3:a4",
                     "score": 4,
                     "text": "Data is in one place but discoverable through several registries"
                 }
@@ -114,37 +114,37 @@
         {
             "answers": [
                 {
-                    "id": "",
+                    "id": "A:q0:a0",
                     "score": 0,
                     "text": "No access to data or metadata"
                 },
                 {
-                    "id": "",
+                    "id": "A:q0:a1",
                     "score": 1,
                     "text": "Access to metadata only"
                 },
                 {
-                    "id": "",
+                    "id": "A:q0:a2",
                     "score": 2,
                     "text": "Unspecified conditional access e.g. contact the data custodian for access"
                 },
                 {
-                    "id": "",
+                    "id": "A:q0:a3",
                     "score": 3,
                     "text": "Embargoed access after a specified date"
                 },
                 {
-                    "id": "",
+                    "id": "A:q0:a4",
                     "score": 4,
                     "text": "A de-identified / modified subset of the data is publicly accessible"
                 },
                 {
-                    "id": "",
+                    "id": "A:q0:a5",
                     "score": 5,
                     "text": "Fully accessible to persons who meet explicitly stated conditions, e.g. ethics approval for sensitive data"                                                                                                      
                 },
                 {
-                    "id": "",
+                    "id": "A:q0:a6",
                     "score": 5,
                     "text": "Publicly accessible"
                 }
@@ -158,27 +158,27 @@
         {
             "answers": [
                 {
-                    "id": "",
+                    "id": "A:q1:a0",
                     "score": 0,
                     "text": "No access to data"
                 },
                 {
-                    "id": "",
+                    "id": "A:q1:a1",
                     "score": 1,
                     "text": "By individual arrangement"
                 },
                 {
-                    "id": "",
+                    "id": "A:q1:a2",
                     "score": 2,
                     "text": "File download from online location"
                 },
                 {
-                    "id": "",
+                    "id": "A:q1:a3",
                     "score": 3,
                     "text": "Non-standard web service (e.g. OpenAPI/Swagger/informal API)"
                 },
                 {
-                    "id": "",
+                    "id": "A:q1:a4",
                     "score": 4,
                     "text": "Standard web service API (e.g. OGC)"
                 }
@@ -192,17 +192,17 @@
         {
             "answers": [
                 {
-                    "id": "",
+                    "id": "A:q2:a0",
                     "score": 0,
                     "text": "No"
                 },
                 {
-                    "id": "",
+                    "id": "A:q2:a1",
                     "score": 0,
                     "text": "Unsure"
                 },
                 {
-                    "id": "",
+                    "id": "A:q2:a2",
                     "score": 1,
                     "text": "Yes"
                 }
@@ -216,17 +216,17 @@
         {
             "answers": [
                 {
-                    "id": "",
+                    "id": "I:q0:a0",
                     "score": 0,
                     "text": "Mostly in a proprietary format"
                 },
                 {
-                    "id": "",
+                    "id": "I:q0:a1",
                     "score": 1,
                     "text": "In a structured, open standard, non-machine-readable format"
                 },
                 {
-                    "id": "",
+                    "id": "I:q0:a2",
                     "score": 2,
                     "text": "In a structured, open standard, machine-readable format"
                 }
@@ -240,22 +240,22 @@
         {
             "answers": [
                 {
-                    "id": "",
+                    "id": "I:q1:a0",
                     "score": 0,
                     "text": "Data elements not described"
                 },
                 {
-                    "id": "",
+                    "id": "I:q1:a1",
                     "score": 1,
                     "text": "No standards have been applied in the description of data elements"
                 },
                 {
-                    "id": "",
+                    "id": "I:q1:a2",
                     "score": 2,
                     "text": "Standardised vocabularies/ontologies/schema without global identifiers"
                 },
                 {
-                    "id": "",
+                    "id": "I:q1:a3",
                     "score": 3,
                     "text": "Standardised open and universal using resolvable global identifiers linking to explanations"                                                                                                                     
                 }
@@ -269,17 +269,17 @@
         {
             "answers": [
                 {
-                    "id": "",
+                    "id": "I:q2:a0",
                     "score": 0,
                     "text": "There are no links to other metadata"
                 },
                 {
-                    "id": "",
+                    "id": "I:q2:a1",
                     "score": 2,
                     "text": "The metadata record includes URI links to related metadata, data and definitions"
                 },
                 {
-                    "id": "",
+                    "id": "I:q2:a2",
                     "score": 3,
                     "text": "Metadata is represented in a machine readable format, e.g. in a linked data format such as Resource Description Framework (RDF)."                                                                                
                 }
@@ -293,27 +293,27 @@
         {
             "answers": [
                 {
-                    "id": "",
+                    "id": "R:q0:a0",
                     "score": 0,
                     "text": "No license"
                 },
                 {
-                    "id": "",
+                    "id": "R:q0:a1",
                     "score": 2,
                     "text": "Non-standard text-based license"
                 },
                 {
-                    "id": "",
+                    "id": "R:q0:a2",
                     "score": 3,
                     "text": "Non-standard machine-readable license (clearly indicating under what conditions the data may be reused)"                                                                                                         
                 },
                 {
-                    "id": "",
+                    "id": "R:q0:a3",
                     "score": 3,
                     "text": "Standard text based license"
                 },
                 {
-                    "id": "",
+                    "id": "R:q0:a4",
                     "score": 4,
                     "text": "Standard machine-readable license (e.g. Creative Commons)"
                 }
@@ -327,22 +327,22 @@
         {
             "answers": [
                 {
-                    "id": "",
+                    "id": "R:q1:a0",
                     "score": 0,
                     "text": "No provenance information is recorded"
                 },
                 {
-                    "id": "",
+                    "id": "R:q1:a1",
                     "score": 1,
                     "text": "Partially recorded"
                 },
                 {
-                    "id": "",
+                    "id": "R:q1:a2",
                     "score": 2,
                     "text": "Fully recorded in a text format"
                 },
                 {
-                    "id": "",
+                    "id": "R:q1:a3",
                     "score": 3,
                     "text": "Fully recorded in a machine readable format"
                 }
