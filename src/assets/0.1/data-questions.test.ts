@@ -2,16 +2,16 @@ import { describe, expect, test } from 'vitest'
 import Ajv from "ajv"
 
 import schema from './schema.json'
-import questions from './questions.json'
+import { questions, version } from './data-questions.json'
 
 const ajv = new Ajv() // options can be passed, e.g. {allErrors: true}
 
 const validate = ajv.compile(schema)
 
-describe('the questions data', () => {
+describe('the data questions data', () => {
 
     test('should validate against the schema', () => {
-        const valid = validate(questions)
+        const valid = validate({questions, version})
         expect(valid).toBe(true)
     })
 
@@ -36,24 +36,24 @@ describe('the questions data', () => {
         expect(re.test(stringified)).toBe(true)
     })
 
-    test('there should be 6 questions with aspect F', () => {
-        expect(questions.filter(q => q.aspect === 'F').length).toBe(6)
+    test('there should be 4 questions with aspect F', () => {
+        expect(questions.filter(q => q.aspect === 'F').length).toBe(4)
     })
 
-    test('there should be 4 questions with aspect A', () => {
-        expect(questions.filter(q => q.aspect === 'A').length).toBe(4)
+    test('there should be 3 questions with aspect A', () => {
+        expect(questions.filter(q => q.aspect === 'A').length).toBe(3)
     })
 
-    test('there should be 2 questions with aspect I', () => {
-        expect(questions.filter(q => q.aspect === 'I').length).toBe(2)
+    test('there should be 3 questions with aspect I', () => {
+        expect(questions.filter(q => q.aspect === 'I').length).toBe(3)
     })
 
-    test('there should be 6 questions with aspect R', () => {
-        expect(questions.filter(q => q.aspect === 'R').length).toBe(6)
+    test('there should be 2 questions with aspect R', () => {
+        expect(questions.filter(q => q.aspect === 'R').length).toBe(2)
     })
 
-    test('there should be 18 questions in total', () => {
-        expect(questions.length).toBe(18)
+    test('there should be 12 questions in total', () => {
+        expect(questions.length).toBe(12)
     })
 
 })

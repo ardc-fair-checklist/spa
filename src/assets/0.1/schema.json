@@ -1,67 +1,80 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema",
-    "items": {
-        "additionalProperties": false,
-        "properties": {
-            "answers": {
-                "items": {
-                    "additionalProperties": false,
-                    "properties": {
-                        "id": {
-                            "type": "string"
+    "additionalProperties": false,
+    "properties": {
+        "questions": {
+            "items": {
+                "additionalProperties": false,
+                "properties": {
+                    "answers": {
+                        "items": {
+                            "additionalProperties": false,
+                            "properties": {
+                                "id": {
+                                    "type": "string"
+                                },
+                                "score": {
+                                    "minimum": 0,
+                                    "type": "integer"
+                                },
+                                "text": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "id",
+                                "score",
+                                "text"
+                            ],
+                            "type": "object"
                         },
-                        "score": {
-                            "minimum": 0,
-                            "type": "integer"
-                        },
-                        "text": {
-                            "type": "string"
-                        }
+                        "minItems": 2,
+                        "type": "array",
+                        "uniqueItems": true
                     },
-                    "required": [
-                        "id",
-                        "score",
-                        "text"
-                    ],
-                    "type": "object"
+                    "aspect": {
+                        "enum": [
+                            "F",
+                            "A",
+                            "I",
+                            "R"
+                        ],
+                        "type": "string"
+                    },
+                    "guidance": {
+                        "type": "string"
+                    },
+                    "id": {
+                        "type": "string"
+                    },
+                    "principle": {
+                        "type": "string"
+                    },
+                    "text": {
+                        "type": "string"
+                    }
                 },
-                "minItems": 2,
-                "type": "array",
-                "uniqueItems": true
-            },
-            "aspect": {
-                "enum": [
-                    "F",
-                    "A",
-                    "I",
-                    "R"
+                "required": [
+                    "answers",
+                    "aspect",
+                    "guidance",
+                    "id",
+                    "principle",
+                    "text"
                 ],
-                "type": "string"
+                "type": "object"
             },
-            "guidance": {
-                "type": "string"
-            },
-            "id": {
-                "type": "string"
-            },
-            "principle": {
-                "type": "string"
-            },
-            "text": {
-                "type": "string"
-            }
+            "minItems": 1,
+            "type": "array",
+            "uniqueItems": true
         },
-        "required": [
-            "answers",
-            "aspect",
-            "guidance",
-            "id",
-            "principle",
-            "text"
-        ],
-        "type": "object"
+        "version": {
+            "type": "string"
+        }
     },
-    "minItems": 1,
-    "type": "array",
-    "uniqueItems": true
+    "required": [
+        "questions",
+        "version"
+    ],
+    "type": "object"
 }

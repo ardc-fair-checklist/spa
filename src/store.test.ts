@@ -1,9 +1,9 @@
 import { compliance, setCompliance, progress, fairQueryParams, nQuestions, setQuestions, QuestionType } from './store'
 import { beforeEach, describe, expect, test } from 'vitest'
-import data from './test-data.json'
+import { questions } from './test-data.json'
 
 
-setQuestions(data as QuestionType[]);
+setQuestions(questions as QuestionType[]);
 
 describe('initial state', () => {
    test('compliance should be all zeros', () => {
