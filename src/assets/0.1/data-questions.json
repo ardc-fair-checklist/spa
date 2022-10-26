@@ -25,7 +25,7 @@
             ],
             "aspect": "F",
             "guidance": "",
-            "id": "",
+            "id": "F:q0",
             "principle": "",
             "text": "Does the dataset have any identifiers assigned?"
         },
@@ -44,7 +44,7 @@
             ],
             "aspect": "F",
             "guidance": "",
-            "id": "",
+            "id": "F:q1",
             "principle": "",
             "text": "Is the dataset identifier included in all metadata records/files describing the data?"
         },
@@ -73,7 +73,7 @@
             ],
             "aspect": "F",
             "guidance": "",
-            "id": "",
+            "id": "F:q2",
             "principle": "",
             "text": "How is the data described with metadata?"
         },
@@ -107,7 +107,7 @@
             ],
             "aspect": "F",
             "guidance": "",
-            "id": "",
+            "id": "F:q3",
             "principle": "",
             "text": "What type of repository or registry is the metadata record in?"
         },
@@ -151,7 +151,7 @@
             ],
             "aspect": "A",
             "guidance": "",
-            "id": "",
+            "id": "A:q0",
             "principle": "",
             "text": "How accessible is the data?"
         },
@@ -185,7 +185,7 @@
             ],
             "aspect": "A",
             "guidance": "",
-            "id": "",
+            "id": "A:q1",
             "principle": "",
             "text": "Is the data available online without requiring specialised protocols or tools once access has been approved?"                                                                                                            
         },
@@ -209,7 +209,7 @@
             ],
             "aspect": "A",
             "guidance": "",
-            "id": "",
+            "id": "A:q2",
             "principle": "",
             "text": "Will the metadata record be available even if the data is no longer available?"
         },
@@ -233,7 +233,7 @@
             ],
             "aspect": "I",
             "guidance": "",
-            "id": "",
+            "id": "I:q0",
             "principle": "",
             "text": "What (file) format(s) is the data available in?"
         },
@@ -262,7 +262,7 @@
             ],
             "aspect": "I",
             "guidance": "",
-            "id": "",
+            "id": "I:q1",
             "principle": "",
             "text": "What best describes the types of vocabularies/ontologies/tagging schemas used to define the data elements?"                                                                                                              
         },
@@ -286,7 +286,7 @@
             ],
             "aspect": "I",
             "guidance": "",
-            "id": "",
+            "id": "I:q2",
             "principle": "",
             "text": "How is the metadata linked to other data and metadata (to enhance context and clearly indicate relationships)?"                                                                                                          
         },
@@ -320,7 +320,7 @@
             ],
             "aspect": "R",
             "guidance": "",
-            "id": "",
+            "id": "R:q0",
             "principle": "",
             "text": "Which of the following best describes the license/usage rights attached to the data?"
         },
@@ -349,7 +349,7 @@
             ],
             "aspect": "R",
             "guidance": "",
-            "id": "",
+            "id": "R:q1",
             "principle": "",
             "text": "How much provenance information has been captured to facilitate data reuse?"
         }
