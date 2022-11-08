@@ -19,7 +19,7 @@ We recommend using Volar VSCode extension for improved development experience. T
 
 ```shell
 cd <some dir>
-git clone https://github.com/ardc-fair-checklist/ardc-fair-checklist .
+git clone https://github.com/ardc-fair-checklist/spa .
 npm install
 ```
 
@@ -37,7 +37,7 @@ npm run build
 
 ## Publishing
 
-There is a GitHub action `/.github/workflows/publish.yml` that builds the project for production and hosts it at https://ardc-fair-checklist.github.io/ardc-fair-checklist. The GitHub action can be triggered manually via the GitHub user interface.
+There is a GitHub action `/.github/workflows/publish.yml` that builds the project for production and hosts it at https://ardc-fair-checklist.github.io/spa. The GitHub action can be triggered manually via the GitHub user interface.
 
 ## TODO
 
